@@ -28,6 +28,33 @@ if ( ! function_exists( 'bootscore_category_badge' ) ) :
 endif;
 // Category Badge End
 
+// Recipe Badge
+if ( ! function_exists( 'bs_recipe_category_badge' ) ) :
+	function bs_recipe_category_badge() {
+			$recipes = get_the_terms(get_the_ID(), 'bs_recipe_category');
+			if(!$recipes){
+				return;
+			}
+		
+            echo '<div class="category-badge mb-2">';
+			$badges = [];
+			
+            foreach( $recipes as $recipe ) {
+				$recipe_url = get_term_link($recipe, 'bs_recipe_category');
+				$badge = sprintf(
+					'<a href="%s" class="badge bg-secondary">%s</a>',
+					$recipe_url,
+					$recipe->name
+				);
+				array_push($badges, $badge);
+            }
+            echo implode(' ', $badges);	
+            echo '</div>';
+		
+	}
+endif;
+// Recipe Badge End
+
 
 // Category
 if ( ! function_exists( 'bootscore_category' ) ) :
