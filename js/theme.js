@@ -161,6 +161,25 @@ jQuery(document).ready(function ($) {
   $('.alert a').addClass('alert-link');
 }); // jQuery End
 
+var burgerActiveShowNav = function burgerActiveShowNav() {
+  var burger = document.querySelector('.burger');
+  var nav = document.querySelector('.nav-items');
+  var navItems = document.querySelectorAll('.nav-items li');
+  burger.addEventListener('click', function () {
+    nav.classList.toggle('nav-show');
+    navItems.forEach(function (item, index) {
+      if (item.style.animation) {
+        item.style.animation = '';
+      } else {
+        item.style.animation = "navItemsSlideIn 0.5s ease forwards ".concat(index / 7 + 0.6, "s");
+      }
+    });
+    burger.classList.toggle('toggle');
+  });
+};
+
+burgerActiveShowNav();
+
 /***/ }),
 
 /***/ "./src/sass/theme.scss":
