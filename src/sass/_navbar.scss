@@ -1,16 +1,19 @@
 .the-navbar{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     min-height: 8vh;
-    background-color: #f4f4f4;
+    font-family: 'poppins', sans-serif;
         .logo{
-            color: #333;
             text-transform: uppercase;
-            letter-spacing: 5px;
+            letter-spacing: 3px;
             font-size: 20px;
+            font-weight: bold;
         }
-
+        .nav-items{
+            a {
+                letter-spacing: 3px;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
         
 }
 
@@ -37,9 +40,9 @@
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #f4f4f4;
+        background-color: #f8f9fa;
         display: flex;
-        flex-direction: column;
+        flex-direction: column !important;
         align-items: center;
         justify-content: space-around !important;
         width: 50%;
