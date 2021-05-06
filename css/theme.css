@@ -10954,7 +10954,7 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
   transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1248px) {
+@media screen and (max-width: 990px) {
   body {
     overflow-x: hidden;
   }
