@@ -43,7 +43,9 @@
                 <div class="container">
                     <!-- logo -->
                     <a class="navbar-brand logo" href="/">
-                        Hello world
+                    <?php 
+                        ir_navbar_logo();
+                    ?>
 				    </a>
                     <!-- end logo -->
                     <!-- Top Nav Widget -->

@@ -78,11 +78,34 @@ if ( ! function_exists( 'bootscore_setup' ) ) :
 		) );
 
 		// Add theme support for selective refresh for widgets.
-		add_theme_support( 'customize-selective-refresh-widgets' );
+        add_theme_support( 'customize-selective-refresh-widgets' );
+        
+        // add theme support for custom logo
+        add_theme_support('custom-logo', [
+            'height' => 50,
+            'width' => 200,
+        ]);
+
+        // add theme support for custom header image.
+        add_theme_support('custom-header', [
+            'height' => 500,
+            'widht' => 2560,
+        ]);
 
 	}
 endif;
 add_action( 'after_setup_theme', 'bootscore_setup' );
+
+function ir_navbar_logo(){
+    $logo_id = get_theme_mod('custom_logo');
+    $logo = wp_get_attachment_image_src($logo_id, 'full');
+
+    if($logo){
+        echo '<img src="' . esc_url($logo[0]) . '" alt="' . get_bloginfo('name') . '">';
+    } else {
+        echo get_bloginfo('name');
+    }
+}
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
