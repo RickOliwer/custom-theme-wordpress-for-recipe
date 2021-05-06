@@ -1,0 +1,31 @@
+{
+  "name": "bootscore-5",
+  "version": "1.0.0",
+  "description": "=== bootScore ===",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drblue/wcm20-cms-saf-bootscore-5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drblue/wcm20-cms-saf-bootscore-5/issues"
+  },
+  "homepage": "https://github.com/drblue/wcm20-cms-saf-bootscore-5#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.2.13",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.0-beta3"
+  }
+}
