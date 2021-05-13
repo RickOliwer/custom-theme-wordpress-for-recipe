@@ -72,7 +72,70 @@ if ( ! function_exists( 'bootscore_category' ) ) :
 endif;
 // Category End
 
+//Ingredients
+if(!function_exists('bootscore_recipe_ingredient')) {
+	function bootscore_recipe_ingredient(){
+		if(!function_exists('get_field')){
+			return;
+		}
+		if ( have_rows('ingredients')){
 
+			echo '<div class="ingredient-container">';
+			while(have_rows('ingredients')){
+				the_row();
+
+				$amount = get_sub_field('amount');
+				$measurement = get_sub_field('measurement');
+				$ingredient = get_sub_field('ingredient');
+
+				printf('<div class="ingredient-card">
+							<div class="inner-card-left">
+								<span>%d %s</span>
+							</div>
+							<div class="inner-card-right">
+								<span>%s</span>
+							</div>
+						</div>',
+						$amount,
+						$measurement,
+						$ingredient,
+				);
+			}
+			echo '</div>';
+		}
+
+
+	}
+}
+//Ingredients End
+
+//Ingredients
+if(!function_exists('bootscore_recipe_instructions')) {
+	function bootscore_recipe_instructions(){
+		if(!function_exists('get_field')){
+			return;
+		}
+		if ( have_rows('instructions')){
+
+			echo '<ul class="instructions">';
+			while(have_rows('instructions')){
+				the_row();
+
+				$steps = get_sub_field('steps');
+				$instruction = get_sub_field('instruction');
+
+				printf('<li class="steps">%d. %s</li>',
+						$steps,
+						$instruction,
+				);
+			}
+			echo '</ul>';
+		}
+
+
+	}
+}
+//Ingredients End
 // Date
 if ( ! function_exists( 'bootscore_date' ) ) :
 	/**

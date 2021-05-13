@@ -1,6 +1,33 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/nav.js":
+/*!***********************!*\
+  !*** ./src/js/nav.js ***!
+  \***********************/
+/***/ (() => {
+
+var burgerActiveShowNav = function burgerActiveShowNav() {
+  var burger = document.querySelector('.burger');
+  var nav = document.querySelector('.nav-items');
+  var navItems = document.querySelectorAll('.nav-items li');
+  burger.addEventListener('click', function () {
+    nav.classList.toggle('nav-show');
+    navItems.forEach(function (item, index) {
+      if (item.style.animation) {
+        item.style.animation = '';
+      } else {
+        item.style.animation = "navItemsSlideIn 0.5s ease forwards ".concat(index / 7 + 0.6, "s");
+      }
+    });
+    burger.classList.toggle('toggle');
+  });
+};
+
+burgerActiveShowNav();
+
+/***/ }),
+
 /***/ "./src/js/theme.js":
 /*!*************************!*\
   !*** ./src/js/theme.js ***!
@@ -161,25 +188,6 @@ jQuery(document).ready(function ($) {
   $('.alert a').addClass('alert-link');
 }); // jQuery End
 
-var burgerActiveShowNav = function burgerActiveShowNav() {
-  var burger = document.querySelector('.burger');
-  var nav = document.querySelector('.nav-items');
-  var navItems = document.querySelectorAll('.nav-items li');
-  burger.addEventListener('click', function () {
-    nav.classList.toggle('nav-show');
-    navItems.forEach(function (item, index) {
-      if (item.style.animation) {
-        item.style.animation = '';
-      } else {
-        item.style.animation = "navItemsSlideIn 0.5s ease forwards ".concat(index / 7 + 0.6, "s");
-      }
-    });
-    burger.classList.toggle('toggle');
-  });
-};
-
-burgerActiveShowNav();
-
 /***/ }),
 
 /***/ "./src/sass/theme.scss":
@@ -330,6 +338,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/theme.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/nav.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/sass/theme.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

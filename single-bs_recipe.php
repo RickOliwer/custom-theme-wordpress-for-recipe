@@ -41,6 +41,12 @@
                     </p>
 
                     <?php the_content(); ?>
+                    <div class="recipe-info">
+                        <?php bootscore_recipe_ingredient(); ?>
+                        <?php bootscore_recipe_instructions(); ?>
+                    </div>
+
+
 
                 </div>
 

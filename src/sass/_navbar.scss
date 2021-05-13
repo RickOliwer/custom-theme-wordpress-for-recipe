@@ -76,14 +76,38 @@
 
 .toggle{
     .line1{
+        //X
         transform: rotate(-45deg) translate(-5px, 6px);
+        
+        //O
+        //display: none;
+        
+        // width: 10px;
+        // margin-left: 20px;
     }
 
     .line2{
+        //X
         opacity: 0;
+        
+        //O
+        //height: 30px;
+        //width: 30px;
+        //background-color: transparent;
+        //border-radius: 50%;
+        //border: 3px solid #333;
+        
+        // width: 20px;
+        // margin-left: 10px;
+
     }
 
     .line3{
+        // X
         transform: rotate(45deg) translate(-5px, -6px);
+        
+        //O
+       //display: none;
+
     }
 }
