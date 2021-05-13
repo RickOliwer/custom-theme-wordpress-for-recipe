@@ -1,30 +1,48 @@
 .recipe-info{
 
-    .ingredient-card{
-        display: flex;
-        justify-content: space-between;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-        transition: 0.3s;
-        margin: 15px;
-    
-            &:hover{
-                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    .ingredient-container{
+        
+            .ingredients-header{
+                margin: 15px;
             }
-    
-            .inner-card-left{
-                margin: 10px;
+
+            .servings{
+                margin: 15px;
             }
-    
-            .inner-card-right{
-                margin: 10px;
+        
+            .ingredient-card{
+                display: flex;
+                justify-content: space-between;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                margin: 15px;
+            
+                    &:hover{
+                        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    }
+            
+                    .inner-card-left{
+                        margin: 10px;
+                    }
+            
+                    .inner-card-right{
+                        margin: 10px;
+                    }
             }
     }
 
-    .instructions{
-        list-style: none;
-        padding: 0px;
-            .steps{
+    .instructions-container{
+
+            .instructions-header{
                 margin: 15px;
+            }
+        
+            .instructions{
+                list-style: none;
+                padding: 0px;
+                    .steps{
+                        margin: 15px;
+                    }
             }
     }
 
@@ -35,10 +53,29 @@
         display: flex;
             .ingredient-container{
                 width: 35%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                margin: 15px;
+
+                    .ingredient-card{
+                        box-shadow: 0 0px 0px 0 rgb(255, 255, 255);
+                        border-bottom: 1px solid rgb(203, 203, 203);
+                        margin: 15px;
+
+                        &:hover{
+                            box-shadow: 0 0px 0px 0 rgb(255, 255, 255);
+                        }
+                    }
             }
         
-            .instructions{
+            .instructions-container{
                 width: 65%;
+                box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+                transition: 0.3s;
+                margin: 15px;
+                    &:hover{
+                        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+                    }
             }
     
     }

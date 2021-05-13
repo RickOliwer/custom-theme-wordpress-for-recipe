@@ -11017,27 +11017,36 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
   transform: rotate(45deg) translate(-5px, -6px);
 }
 
-.recipe-info .ingredient-card {
+.recipe-info .ingredient-container .ingredients-header {
+  margin: 15px;
+}
+.recipe-info .ingredient-container .servings {
+  margin: 15px;
+}
+.recipe-info .ingredient-container .ingredient-card {
   display: flex;
   justify-content: space-between;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   margin: 15px;
 }
-.recipe-info .ingredient-card:hover {
+.recipe-info .ingredient-container .ingredient-card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.recipe-info .ingredient-card .inner-card-left {
+.recipe-info .ingredient-container .ingredient-card .inner-card-left {
   margin: 10px;
 }
-.recipe-info .ingredient-card .inner-card-right {
+.recipe-info .ingredient-container .ingredient-card .inner-card-right {
   margin: 10px;
 }
-.recipe-info .instructions {
+.recipe-info .instructions-container .instructions-header {
+  margin: 15px;
+}
+.recipe-info .instructions-container .instructions {
   list-style: none;
   padding: 0px;
 }
-.recipe-info .instructions .steps {
+.recipe-info .instructions-container .instructions .steps {
   margin: 15px;
 }
 
@@ -11047,8 +11056,25 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
   }
   .recipe-info .ingredient-container {
     width: 35%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 15px;
   }
-  .recipe-info .instructions {
+  .recipe-info .ingredient-container .ingredient-card {
+    box-shadow: 0 0px 0px 0 white;
+    border-bottom: 1px solid #cbcbcb;
+    margin: 15px;
+  }
+  .recipe-info .ingredient-container .ingredient-card:hover {
+    box-shadow: 0 0px 0px 0 white;
+  }
+  .recipe-info .instructions-container {
     width: 65%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 15px;
+  }
+  .recipe-info .instructions-container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 }

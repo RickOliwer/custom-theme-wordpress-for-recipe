@@ -28,6 +28,27 @@ burgerActiveShowNav();
 
 /***/ }),
 
+/***/ "./src/js/servings.js":
+/*!****************************!*\
+  !*** ./src/js/servings.js ***!
+  \****************************/
+/***/ (() => {
+
+// function updateServingsTotal(){
+//     let items = document.querySelectorAll('.inner-card-left');
+//     let total = 0;
+//     for(let item of items){
+//         let servings = item.querySelector('.servings').value;
+//         let amount = item.querySelector('.value-amount').textContent;
+//         total += parseInt(amount) * servings;
+//         for(let i of item){
+//             i.textContent = total;
+//         }
+//     }
+// }
+
+/***/ }),
+
 /***/ "./src/js/theme.js":
 /*!*************************!*\
   !*** ./src/js/theme.js ***!
@@ -339,6 +360,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/theme.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/nav.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/servings.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/sass/theme.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

@@ -80,7 +80,7 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 		}
 		if ( have_rows('ingredients')){
 
-			echo '<div class="ingredient-container">';
+			//echo '<div class="ingredient-container">';
 			while(have_rows('ingredients')){
 				the_row();
 
@@ -90,7 +90,7 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 
 				printf('<div class="ingredient-card">
 							<div class="inner-card-left">
-								<span>%d %s</span>
+								<span><span class="value-amount">%d</span> %s</span>
 							</div>
 							<div class="inner-card-right">
 								<span>%s</span>
@@ -101,7 +101,7 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 						$ingredient,
 				);
 			}
-			echo '</div>';
+			//echo '</div>';
 		}
 
 
@@ -109,7 +109,7 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 }
 //Ingredients End
 
-//Ingredients
+//Instructions
 if(!function_exists('bootscore_recipe_instructions')) {
 	function bootscore_recipe_instructions(){
 		if(!function_exists('get_field')){
@@ -117,6 +117,9 @@ if(!function_exists('bootscore_recipe_instructions')) {
 		}
 		if ( have_rows('instructions')){
 
+			printf('<h4 class="instructions-header">%s</h4>',
+					__('Instructions', 'bootscore'),
+			);
 			echo '<ul class="instructions">';
 			while(have_rows('instructions')){
 				the_row();
@@ -135,7 +138,31 @@ if(!function_exists('bootscore_recipe_instructions')) {
 
 	}
 }
-//Ingredients End
+//Instructions End
+
+// Servings
+if(!function_exists('bootscore_recipe_servings')){
+	function bootscore_recipe_servings(){
+		$servings = get_field('servings', false, false);
+
+		if(!empty($servings)) {
+
+			printf('<h4 class="ingredients-header">%s</h4>',
+			__('Ingredients', 'bootscore'),
+			);
+
+			echo '<div class="servings">';
+			printf('<lable for="servings">%s</lable>
+					<input id="servings" class="servings-input" type="number" value="%s" min="2" max="10" step="2" oninput=""/>',
+					__('Servings', 'bootscore'),
+					$servings,
+
+			);
+			echo '</div>';
+		}
+	}
+}
+//Servings End
 // Date
 if ( ! function_exists( 'bootscore_date' ) ) :
 	/**
