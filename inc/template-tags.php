@@ -153,7 +153,15 @@ if(!function_exists('bootscore_recipe_servings')){
 
 			echo '<div class="servings">';
 			printf('<lable for="servings">%s</lable>
-					<input id="servings" class="servings-input" type="number" value="%s" min="2" max="10" step="2" oninput=""/>',
+					<input 
+					id="servings" 
+					class="servings-input" 
+					type="number" 
+					value="%s" 
+					min="2" 
+					max="10" 
+					step="2" 
+					oninput="updateServingsTotal()"/>',
 					__('Servings', 'bootscore'),
 					$servings,
 
