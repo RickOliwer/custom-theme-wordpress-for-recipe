@@ -80,6 +80,29 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 		}
 		if ( have_rows('ingredients')){
 
+			printf('<h4 class="ingredients-header">%s</h4>',
+			__('Ingredients', 'bootscore'),
+			);
+
+			echo '<div class="servings">';
+			printf('<lable for="servings">%s</lable>
+					<input 
+					id="servings" 
+					class="servings-input"
+					name="servings-input" 
+					type="number" 
+					value="2" 
+					min="2" 
+					max="10" 
+					step="2"/>
+					<button class="js-decreaseService">-</button>
+					<button class="js-increaseService">+</button>',
+					__('Servings', 'bootscore'),
+					
+
+			);
+			echo '</div>';
+
 			//echo '<div class="ingredient-container">';
 			while(have_rows('ingredients')){
 				the_row();
@@ -90,7 +113,8 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 
 				printf('<div class="ingredient-card">
 							<div class="inner-card-left">
-								<span><span class="value-amount">%d</span> %s</span>
+							<div class="value-amount" data-baseValue="%d"><span></span> </div>
+							<span> %s</span>
 							</div>
 							<div class="inner-card-right">
 								<span>%s</span>
@@ -155,13 +179,15 @@ if(!function_exists('bootscore_recipe_servings')){
 			printf('<lable for="servings">%s</lable>
 					<input 
 					id="servings" 
-					class="servings-input" 
+					class="servings-input"
+					name="servings-input" 
 					type="number" 
 					value="%s" 
 					min="2" 
 					max="10" 
-					step="2" 
-					oninput="updateServingsTotal()"/>',
+					step="2"/>
+					<button class="js-decreaseService">-</button>
+					<button class="js-increaseService">+</button>',
 					__('Servings', 'bootscore'),
 					$servings,
 

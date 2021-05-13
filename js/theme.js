@@ -34,18 +34,28 @@ burgerActiveShowNav();
   \****************************/
 /***/ (() => {
 
-// function updateServingsTotal(){
-//     let items = document.querySelectorAll('.inner-card-left');
-//     let total = 0;
-//     for(let item of items){
-//         let servings = item.querySelector('.servings').value;
-//         let amount = item.querySelector('.value-amount').textContent;
-//         total += parseInt(amount) * servings;
-//         for(let i of item){
-//             i.textContent = total;
-//         }
-//     }
-// }
+(function ($) {
+  var computeServing = function computeServing(serving) {
+    $('.value-amount').each(function (index, item) {
+      $(item).children('span').html($(item)[0].dataset.basevalue * serving);
+    });
+  };
+
+  $('#servings').on('change', function () {
+    computeServing($(this).val());
+  });
+  $('.js-decreaseService').on('click', function () {
+    var currentServing = $('#servings').val();
+    $('#servings').val(currentServing - 2);
+    computeServing(currentServing - 2);
+  });
+  $('.js-increaseService').on('click', function () {
+    var currentServing = $('#servings').val();
+    $('#servings').val(parseInt(currentServing) + 2);
+    computeServing(parseInt(currentServing) + 2);
+  });
+  computeServing(2);
+})(jQuery);
 
 /***/ }),
 

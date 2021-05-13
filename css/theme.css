@@ -11035,6 +11035,10 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-left {
   margin: 10px;
+  display: flex;
+}
+.recipe-info .ingredient-container .ingredient-card .inner-card-left .value-amount {
+  margin-right: 3px;
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-right {
   margin: 10px;
@@ -11048,6 +11052,12 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 }
 .recipe-info .instructions-container .instructions .steps {
   margin: 15px;
+}
+.recipe-info .js-decreaseService {
+  display: none;
+}
+.recipe-info .js-increaseService {
+  display: none;
 }
 
 @media screen and (min-width: 765px) {

@@ -23,6 +23,10 @@
             
                     .inner-card-left{
                         margin: 10px;
+                        display: flex;
+                            .value-amount{
+                                margin-right: 3px;
+                            }
                     }
             
                     .inner-card-right{
@@ -44,6 +48,14 @@
                         margin: 15px;
                     }
             }
+    }
+
+    .js-decreaseService{
+        display: none;
+    }
+
+    .js-increaseService{
+        display: none;
     }
 
 }
