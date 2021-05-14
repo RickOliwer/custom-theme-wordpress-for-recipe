@@ -11036,12 +11036,14 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 .recipe-info .ingredient-container .ingredient-card .inner-card-left {
   margin: 10px;
   display: flex;
+  width: 40%;
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-left .value-amount {
   margin-right: 3px;
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-right {
   margin: 10px;
+  width: 60%;
 }
 .recipe-info .instructions-container .instructions-header {
   margin: 15px;
@@ -11090,6 +11092,7 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 }
 .gallery-container {
   height: 350px;
+  margin-top: 50px;
 }
 .gallery-container .carousel {
   position: relative;
@@ -11165,16 +11168,16 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
   }
   .gallery-container .carousel {
     height: 400px;
-    max-width: 550px;
+    max-width: 700px;
   }
   .gallery-container .carousel .button-left {
-    left: -40px;
+    left: 0px;
     cursor: pointer;
     z-index: 1;
     color: #333;
   }
   .gallery-container .carousel .button-right {
-    right: -40px;
+    right: 0px;
     z-index: 1;
     color: #333;
   }
@@ -11185,7 +11188,7 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
   }
   .gallery-container .carousel {
     height: 600px;
-    max-width: 900px;
+    max-width: 1200px;
   }
   .gallery-container .carousel .button-left {
     left: -40px;

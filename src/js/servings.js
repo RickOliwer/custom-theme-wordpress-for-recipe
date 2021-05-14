@@ -10,13 +10,13 @@
       })
       $('.js-decreaseService').on('click', function() {
         var currentServing = $('#servings').val()
-        $('#servings').val(currentServing - 2)
-        computeServing(currentServing - 2)
+        $('#servings').val(currentServing - 1)
+        computeServing(currentServing - 1)
       })
       $('.js-increaseService').on('click', function() {
         var currentServing = $('#servings').val()
-        $('#servings').val(parseFloat(currentServing) + 2)
-        computeServing(parseFloat(currentServing) + 2)
+        $('#servings').val(parseFloat(currentServing) + 1)
+        computeServing(parseFloat(currentServing) + 1)
       })
       computeServing(2)
 }(jQuery));

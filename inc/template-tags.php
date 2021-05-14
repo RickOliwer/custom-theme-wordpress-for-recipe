@@ -72,7 +72,6 @@ if(!function_exists('bootscore_recipe_gallery')){
 		?>
 			<div class="carousel">
 				<i class="fas fa-chevron-left fa-2x carousel_button button-left is-hidden"></i>
-				<!-- <button class="carousel_button button-left is-hidden">prev</button> -->
 					<div class="carousel_track-container">
 						<ul class="carousel_track">
 							<?php foreach ($gallerySlider as $image) : ?>
@@ -86,7 +85,6 @@ if(!function_exists('bootscore_recipe_gallery')){
 							<?php endforeach ; ?>
 						</ul>
 					</div>
-				<!-- <button class="carousel_button button-right">next</button> -->
 				<i class="fas fa-chevron-right fa-2x carousel_button button-right"></i>
 
 

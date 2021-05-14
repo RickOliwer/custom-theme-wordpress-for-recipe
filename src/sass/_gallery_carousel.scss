@@ -1,5 +1,6 @@
 .gallery-container{
     height: 350px;
+    margin-top: 50px;
         .carousel{
             position: relative;
             height: 300px;
@@ -86,16 +87,16 @@
         height: 450px;
             .carousel{
                 height: 400px;
-                max-width: 550px;
+                max-width: 700px;
                     .button-left{
-                        left: -40px;
+                        left: 0px;
                         cursor: pointer;
                         z-index: 1;
                         color: #333;
                     }
 
                     .button-right{
-                        right: -40px;
+                        right: 0px;
                         z-index: 1;
                         color: #333;
 
@@ -109,7 +110,7 @@
         height: 660px;
             .carousel{
                 height: 600px;
-                max-width: 900px;
+                max-width: 1200px;
                     .button-left{
                         left: -40px;
                         cursor: pointer;

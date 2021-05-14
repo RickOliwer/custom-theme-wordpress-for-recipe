@@ -24,6 +24,7 @@
                     .inner-card-left{
                         margin: 10px;
                         display: flex;
+                        width: 40%;
                             .value-amount{
                                 margin-right: 3px;
                             }
@@ -31,6 +32,7 @@
             
                     .inner-card-right{
                         margin: 10px;
+                        width: 60%;
                     }
             }
     }
