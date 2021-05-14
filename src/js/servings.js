@@ -15,8 +15,8 @@
       })
       $('.js-increaseService').on('click', function() {
         var currentServing = $('#servings').val()
-        $('#servings').val(parseInt(currentServing) + 2)
-        computeServing(parseInt(currentServing) + 2)
+        $('#servings').val(parseFloat(currentServing) + 2)
+        computeServing(parseFloat(currentServing) + 2)
       })
       computeServing(2)
 }(jQuery));

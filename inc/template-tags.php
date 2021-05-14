@@ -55,6 +55,52 @@ if ( ! function_exists( 'bs_recipe_category_badge' ) ) :
 endif;
 // Recipe Badge End
 
+if(!function_exists('bootscore_recipe_gallery')){
+	function bootscore_recipe_gallery(){
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		$gallerySlider = get_field('gallery');
+
+		$length = count($gallerySlider);
+
+		if(!$gallerySlider){
+			return;
+		}
+
+		?>
+			<div class="carousel">
+				<i class="fas fa-chevron-left fa-2x carousel_button button-left is-hidden"></i>
+				<!-- <button class="carousel_button button-left is-hidden">prev</button> -->
+					<div class="carousel_track-container">
+						<ul class="carousel_track">
+							<?php foreach ($gallerySlider as $image) : ?>
+							<li class="carousel_slide">
+								<?php
+									//$img = wp_get_attachment_image_src($image['ID'], 'thumbnail');
+									//$img_srcset = wp_get_attachment_image_srcset($image['ID'], 'thumbnail');
+								?>
+								<img src="<?= $image['url']; ?>" class="carousel_image">
+							</li>
+							<?php endforeach ; ?>
+						</ul>
+					</div>
+				<!-- <button class="carousel_button button-right">next</button> -->
+				<i class="fas fa-chevron-right fa-2x carousel_button button-right"></i>
+
+
+				<div class="carousel_nav">
+					<?php for($i = 0 ; $i < $length ; $i++) : ?>
+						<button class="carousel_indicator"></button>
+					<?php endfor ; ?>
+				</div>
+    		</div>
+		<?php
+
+	}
+}
+
 
 // Category
 if ( ! function_exists( 'bootscore_category' ) ) :
@@ -107,20 +153,21 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 			while(have_rows('ingredients')){
 				the_row();
 
-				$amount = get_sub_field('amount');
+				$amounts = get_sub_field('amount');
 				$measurement = get_sub_field('measurement');
 				$ingredient = get_sub_field('ingredient');
 
+			
 				printf('<div class="ingredient-card">
 							<div class="inner-card-left">
-							<div class="value-amount" data-baseValue="%d"><span></span> </div>
+							<div class="value-amount" data-baseValue="%01.1f"><span></span> </div>
 							<span> %s</span>
 							</div>
 							<div class="inner-card-right">
 								<span>%s</span>
 							</div>
 						</div>',
-						$amount,
+						$amounts,
 						$measurement,
 						$ingredient,
 				);

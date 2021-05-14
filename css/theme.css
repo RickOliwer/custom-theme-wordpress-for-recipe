@@ -11088,3 +11088,114 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
   }
 }
+.gallery-container {
+  height: 350px;
+}
+.gallery-container .carousel {
+  position: relative;
+  height: 300px;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.gallery-container .carousel .carousel_track-container {
+  background: transparent;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.gallery-container .carousel .carousel_track-container .carousel_track {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+  height: 100%;
+  transition: transform 250ms ease-in;
+}
+.gallery-container .carousel .carousel_track-container .carousel_track .carousel_slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.gallery-container .carousel .carousel_track-container .carousel_track .carousel_slide .carousel_image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery-container .carousel .carousel_button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.gallery-container .carousel .button-left {
+  left: 0px;
+  cursor: pointer;
+  z-index: 1;
+  color: #fff;
+}
+.gallery-container .carousel .button-right {
+  right: 0px;
+  z-index: 1;
+  color: #fff;
+}
+.gallery-container .carousel .is-hidden {
+  display: none;
+}
+.gallery-container .carousel .carousel_nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.gallery-container .carousel .carousel_nav .carousel_indicator {
+  border: 0;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 0 12px;
+  cursor: pointer;
+}
+.gallery-container .carousel .carousel_nav .carousel_indicator.current-slide {
+  background: rgba(0, 0, 0, 0.75);
+}
+@media screen and (min-width: 765px) {
+  .gallery-container {
+    height: 450px;
+  }
+  .gallery-container .carousel {
+    height: 400px;
+    max-width: 550px;
+  }
+  .gallery-container .carousel .button-left {
+    left: -40px;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+  }
+  .gallery-container .carousel .button-right {
+    right: -40px;
+    z-index: 1;
+    color: #333;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .gallery-container {
+    height: 660px;
+  }
+  .gallery-container .carousel {
+    height: 600px;
+    max-width: 900px;
+  }
+  .gallery-container .carousel .button-left {
+    left: -40px;
+    cursor: pointer;
+    z-index: 1;
+    color: #333;
+  }
+  .gallery-container .carousel .button-right {
+    right: -40px;
+    z-index: 1;
+    color: #333;
+  }
+}

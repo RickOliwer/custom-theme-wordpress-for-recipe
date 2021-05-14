@@ -1,6 +1,105 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/gallery_carousel.js":
+/*!************************************!*\
+  !*** ./src/js/gallery_carousel.js ***!
+  \************************************/
+/***/ (() => {
+
+var track = document.querySelector('.carousel_track');
+var slides = Array.from(track.children);
+var nextButton = document.querySelector('.button-right');
+var prevButton = document.querySelector('.button-left');
+var dotsNav = document.querySelector('.carousel_nav');
+var dots = Array.from(dotsNav.children);
+var slideWidth = slides[0].getBoundingClientRect().width;
+var addClassToCurrentSlider = document.querySelector('.carousel_track > li:first-child');
+var addClassToCarouselNav = document.querySelector('.carousel_nav > button:first-child');
+addClassToCurrentSlider.classList.add('current-slide');
+addClassToCarouselNav.classList.add('current-slide'); // arrange the slides next to one another
+
+var setSlidePosition = function setSlidePosition(slide, index) {
+  slide.style.left = slideWidth * index + 'px';
+};
+
+slides.forEach(setSlidePosition);
+
+var moveToSlide = function moveToSlide(track, currentSlide, targetSlide) {
+  track.style.transform = 'translateX(-' + targetSlide.style.left + ')';
+  currentSlide.classList.remove('current-slide');
+  targetSlide.classList.add('current-slide');
+};
+
+var updateDots = function updateDots(currentDot, targetDot) {
+  currentDot.classList.remove('current-slide');
+  targetDot.classList.add('current-slide');
+};
+
+var hideShowArrows = function hideShowArrows(slides, prevButton, nextButton, targetIndex) {
+  if (targetIndex === 0) {
+    prevButton.classList.add('is-hidden');
+    nextButton.classList.remove('is-hidden');
+  } else if (targetIndex === slides.length - 1) {
+    prevButton.classList.remove('is-hidden');
+    nextButton.classList.add('is-hidden');
+  } else {
+    prevButton.classList.remove('is-hidden');
+    nextButton.classList.remove('is-hidden');
+  }
+}; //when I ckicj left, move slides to left
+
+
+prevButton.addEventListener('click', function (e) {
+  var currentSlide = track.querySelector('.current-slide'); //console.log(currentSlide.nextElementSibling);
+
+  var prevSlide = currentSlide.previousElementSibling;
+  var currentDot = dotsNav.querySelector('.current-slide');
+  var prevDot = currentDot.previousElementSibling;
+  var prevIndex = slides.findIndex(function (slide) {
+    return slide === prevSlide;
+  });
+  hideShowArrows(slides, prevButton, nextButton, prevIndex);
+  moveToSlide(track, currentSlide, prevSlide);
+  updateDots(currentDot, prevDot);
+}); //when click right, move slides to right
+
+nextButton.addEventListener('click', function (e) {
+  var currentSlide = track.querySelector('.current-slide'); //console.log(currentSlide.nextElementSibling);
+
+  var nextSlide = currentSlide.nextElementSibling;
+  var currentDot = dotsNav.querySelector('.current-slide');
+  var nextDot = currentDot.nextElementSibling;
+  var nextIndex = slides.findIndex(function (slide) {
+    return slide === nextSlide;
+  });
+  moveToSlide(track, currentSlide, nextSlide);
+  updateDots(currentDot, nextDot);
+  hideShowArrows(slides, prevButton, nextButton, nextIndex);
+}); // when click the nav indicator
+
+dotsNav.addEventListener('click', function (e) {
+  //what indicator was clicked on?
+  var targetDot = e.target.closest('button');
+  console.log(targetDot);
+  if (!targetDot) return;
+  var currentSlide = track.querySelector('.current-slide');
+  var currentDot = dotsNav.querySelector('.current-slide'); //find index
+
+  var targetIndex = dots.findIndex(function (dot) {
+    return dot === targetDot;
+  });
+  var targetSlide = slides[targetIndex];
+  console.log(targetIndex);
+  moveToSlide(track, currentSlide, targetSlide);
+  currentDot.classList.remove('current-slide');
+  targetDot.classList.add('current-slide');
+  updateDots(currentDot, targetDot);
+  hideShowArrows(slides, prevButton, nextButton, targetIndex);
+});
+
+/***/ }),
+
 /***/ "./src/js/nav.js":
 /*!***********************!*\
   !*** ./src/js/nav.js ***!
@@ -51,8 +150,8 @@ burgerActiveShowNav();
   });
   $('.js-increaseService').on('click', function () {
     var currentServing = $('#servings').val();
-    $('#servings').val(parseInt(currentServing) + 2);
-    computeServing(parseInt(currentServing) + 2);
+    $('#servings').val(parseFloat(currentServing) + 2);
+    computeServing(parseFloat(currentServing) + 2);
   });
   computeServing(2);
 })(jQuery);
@@ -371,6 +470,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/theme.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/nav.js")))
 /******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/servings.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/js/gallery_carousel.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/theme"], () => (__webpack_require__("./src/sass/theme.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	

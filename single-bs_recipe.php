@@ -39,8 +39,10 @@
 				            ?>
                         </small>
                     </p>
-
                     <?php the_content(); ?>
+                    <div class="gallery-container">
+                        <?php bootscore_recipe_gallery(); ?>
+                    </div>
                     <div class="recipe-info">
                         <div class="ingredient-container">
                             <?php bootscore_recipe_ingredient(); ?>

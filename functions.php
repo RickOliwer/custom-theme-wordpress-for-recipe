@@ -275,9 +275,10 @@ function bootscore_scripts() {
     // Google fonts
     wp_enqueue_style('google-fonts', 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap', [], null);
 
-    // jquery
+    // js-file with dependency of jQuery
     wp_register_script('servings', plugins_url('/js/servings.js', __FILE__), array('jquery') );
     wp_enqueue_script('servings');
+    
     // Theme JS
 	wp_enqueue_script( 'bootscore-script', get_template_directory_uri() . '/js/theme.js', array(), '20151215', true );
 
