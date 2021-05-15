@@ -1,12 +1,11 @@
 <?php
 
-//Ingredients
-if(!function_exists('bootscore_recipe_ingredient')) {
-	function bootscore_recipe_ingredient(){
-		if(!function_exists('get_field')){
-			return;
-		}
-		if ( have_rows('ingredients')){
+// Servings (not done)
+if(!function_exists('bootscore_recipe_servings')){
+	function bootscore_recipe_servings(){
+		$servings = get_field('servings', false, false);
+
+		if(!empty($servings)) {
 
 			printf('<h4 class="ingredients-header">%s</h4>',
 			__('Ingredients', 'bootscore'),
@@ -19,14 +18,61 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 					class="servings-input"
 					name="servings-input" 
 					type="number" 
-					value="2" 
+					value="%s" 
 					min="2" 
 					max="10" 
 					step="2"/>
 					<button class="js-decreaseService">-</button>
 					<button class="js-increaseService">+</button>',
 					__('Servings', 'bootscore'),
+					$servings,
+
+			);
+			echo '</div>';
+		}
+	}
+}
+//Servings End
+
+//Ingredients
+if(!function_exists('bootscore_recipe_ingredient')) {
+	function bootscore_recipe_ingredient(){
+		if(!function_exists('get_field')){
+			return;
+		}
+		if ( have_rows('ingredients')){
+
+			printf('<h4 class="ingredients-header">%s</h4>',
+			__('Ingredients', 'bootscore'),
+			);
+
+			echo '<div class="servings input-group mb-3 m-auto">';
+			// printf('<lable for="servings">%s</lable>
+			// 		<input 
+			// 		id="servings" 
+			// 		class="servings-input"
+			// 		name="servings-input" 
+			// 		type="number" 
+			// 		value="2" 
+			// 		min="2" 
+			// 		max="10" 
+			// 		step="2"/>
+			// 		<button class="js-decreaseService">-</button>
+			// 		<button class="js-increaseService">+</button>',
+			// 		__('Servings', 'bootscore'),
 					
+
+			// );
+
+			printf('
+			<label class="input-group-text" for="servings">%s</label>
+			<select class="form-select servings-input" id="servings">
+			  <option selected>2</option>
+			  <option value="4">4</option>
+			  <option value="6">6</option>
+			  <option value="8">8</option>
+			</select>',
+			__('Servings', 'bootscore'),
 
 			);
 			echo '</div>';
@@ -93,36 +139,3 @@ if(!function_exists('bootscore_recipe_instructions')) {
 }
 //Instructions End
 
-// Servings
-if(!function_exists('bootscore_recipe_servings')){
-	function bootscore_recipe_servings(){
-		$servings = get_field('servings', false, false);
-
-		if(!empty($servings)) {
-
-			printf('<h4 class="ingredients-header">%s</h4>',
-			__('Ingredients', 'bootscore'),
-			);
-
-			echo '<div class="servings">';
-			printf('<lable for="servings">%s</lable>
-					<input 
-					id="servings" 
-					class="servings-input"
-					name="servings-input" 
-					type="number" 
-					value="%s" 
-					min="2" 
-					max="10" 
-					step="2"/>
-					<button class="js-decreaseService">-</button>
-					<button class="js-increaseService">+</button>',
-					__('Servings', 'bootscore'),
-					$servings,
-
-			);
-			echo '</div>';
-		}
-	}
-}
-//Servings End

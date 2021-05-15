@@ -10928,16 +10928,18 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 }
 
 body {
-  background-color: #fbfbfc;
+  background-color: #f3f3f7;
 }
 
 h2 a, .h2 a,
-div a {
+div a,
+.page-item a {
   text-decoration: none;
   color: #333;
 }
 h2 a:hover, .h2 a:hover,
-div a:hover {
+div a:hover,
+.page-item a:hover {
   text-decoration: underline;
   color: #7777ae;
 }
@@ -10955,7 +10957,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 .main-contant {
   width: 98%;
   margin: auto;
-  background-color: #fbfbfc;
+  background-color: #f3f3f7;
 }
 @media screen and (min-width: 1224px) {
   .main-contant {
@@ -10967,6 +10969,10 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   .hero-header-text {
     width: 80%;
   }
+}
+
+.recipe-contant {
+  margin-bottom: 35px;
 }
 
 .the-navbar {
@@ -11017,7 +11023,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     flex-direction: column !important;
     align-items: center;
     justify-content: space-around !important;
-    width: 50%;
+    width: 60%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
     z-index: 1;
@@ -11067,14 +11073,26 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 .recipe-info .ingredient-container {
   background-color: #fff;
-  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   padding: 15px;
   margin-bottom: 23px;
   margin-top: 23px;
+  border-radius: 8px;
+}
+.recipe-info .ingredient-container .servings {
+  width: 93%;
 }
 .recipe-info .ingredient-container .ingredients-header {
   padding: 15px;
+}
+.recipe-info .ingredient-container .input-group-text {
+  background-color: #a6a6f0;
+  color: #333;
+  font-family: "poppins", sans-serif;
+}
+.recipe-info .ingredient-container .input-group-text:focus {
+  border: none;
 }
 .recipe-info .ingredient-container .servings {
   margin: 15px;
@@ -11084,9 +11102,6 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   justify-content: space-between;
   border-bottom: 0.5px solid #cbcbcb;
   margin: 15px;
-}
-.recipe-info .ingredient-container .ingredient-card:hover {
-  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-left {
   margin: 10px;
@@ -11102,11 +11117,12 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 .recipe-info .instructions-container {
   background-color: #fff;
-  box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   padding: 15px;
   margin-bottom: 23px;
   margin-top: 23px;
+  border-radius: 8px;
 }
 .recipe-info .instructions-container .instructions-header {
   padding: 15px;
@@ -11135,13 +11151,12 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
   .recipe-info .instructions-container {
     width: 65%;
-    box-shadow: 0 0.0625rem 0.125rem 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
     margin-left: 15px;
   }
 }
 .gallery-container {
   height: 350px;
-  margin-top: 50px;
 }
 .gallery-container .carousel {
   position: relative;
@@ -11174,6 +11189,7 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 8px;
 }
 .gallery-container .carousel .carousel_button {
   position: absolute;
@@ -11213,11 +11229,11 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 }
 @media screen and (min-width: 765px) {
   .gallery-container {
-    height: 450px;
+    height: 550px;
   }
   .gallery-container .carousel {
-    height: 400px;
-    max-width: 700px;
+    height: 500px;
+    max-width: 750px;
   }
   .gallery-container .carousel .button-left {
     left: 15px;
@@ -11227,17 +11243,23 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
   .gallery-container .carousel .button-right {
     right: 15px;
+    cursor: pointer;
     z-index: 1;
     color: #333;
   }
 }
 @media screen and (min-width: 1224px) {
   .gallery-container {
-    height: 660px;
+    height: 100%;
+    float: right;
+    width: 50%;
+    margin-top: 0px;
+    margin-left: 15px;
+    margin-bottom: 45px;
   }
   .gallery-container .carousel {
-    height: 600px;
-    max-width: 1200px;
+    height: 400px;
+    max-width: 550px;
   }
   .gallery-container .carousel .button-left {
     left: -40px;

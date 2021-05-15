@@ -1,9 +1,10 @@
 body{
-    background-color: #fbfbfc;
+    background-color: #f3f3f7;
 }
 
 h2 a,
-div a{
+div a, 
+.page-item a{
     text-decoration: none;
     color: #333;
 
@@ -26,7 +27,7 @@ h2, h3, h4, h5, h6{
 .main-contant{
     width: 98%;
     margin: auto;
-    background-color: #fbfbfc;
+    background-color: #f3f3f7;
 
         @media screen and (min-width:1224px){
             width: 80%;
@@ -38,4 +39,8 @@ h2, h3, h4, h5, h6{
     @media screen and (min-width:1224px){
         width: 80%;
     }
+}
+
+.recipe-contant{
+    margin-bottom: 35px;
 }
