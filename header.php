@@ -82,5 +82,6 @@
             </nav>
 
         </header><!-- #masthead -->
-
+        
+    
         <?php bootscore_ie_alert(); ?>

@@ -1,0 +1,35 @@
+body{
+    background-color: #fbfbfc;
+}
+
+h2 a,
+div a{
+    text-decoration: none;
+    color: #333;
+
+        &:hover{
+            text-decoration: underline;
+            color: #7777ae;
+        }
+}
+
+h1{
+    font-family: 'poppins', sans-serif;
+    color: #fff;
+}
+ 
+h2, h3, h4, h5, h6{
+    font-family: 'poppins', sans-serif;
+    color: #333;
+}
+
+.main-contant{
+    width: 98%;
+    margin: auto;
+    background-color: #fbfbfc;
+
+        @media screen and (min-width:1224px){
+            width: 80%;
+        }
+
+}

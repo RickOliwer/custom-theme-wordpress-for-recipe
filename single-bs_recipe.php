@@ -11,18 +11,18 @@
         <!-- Hook to add something nice -->
         <?php bs_after_primary(); ?>
 
-        <main id="main" class="site-main">
+        <header class="entry-header">
+            <?php the_post(); ?>
+            <!-- Featured Image-->
+            <div class="height-75 bg-dark text-light align-items-end dflex mb-0" <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?> <div id="featured-full-image" class="page-full-image" style="background-image: url('<?php echo $thumb['0'];?>')">
 
-            <header class="entry-header">
-                <?php the_post(); ?>
-                <!-- Featured Image-->
-                <div class="height-75 bg-dark text-light align-items-end dflex mb-3" <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?> <div id="featured-full-image" class="page-full-image" style="background-image: url('<?php echo $thumb['0'];?>')">
+                <div class="container align-items-end d-flex h-100 pb-3">
+                    <?php the_title('<h1>', '</h1>'); ?>
+                </div>
 
-                    <div class="container align-items-end d-flex h-100 pb-3">
-                        <?php the_title('<h1>', '</h1>'); ?>
-                    </div>
+        </header>
+        <main id="main" class="site-main main-contant pt-4">
 
-            </header>
 
             <div class="container pb-5">
 
@@ -40,9 +40,9 @@
                         </small>
                     </p>
                     <?php the_content(); ?>
-                    <div class="gallery-container">
-                        <?php bootscore_recipe_gallery(); ?>
-                    </div>
+                    
+                    <?php bootscore_recipe_gallery(); ?>
+                
                     <div class="recipe-info">
                         <div class="ingredient-container">
                             <?php bootscore_recipe_ingredient(); ?>

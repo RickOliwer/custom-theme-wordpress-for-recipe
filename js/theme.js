@@ -13,9 +13,11 @@ var nextButton = document.querySelector('.button-right');
 var prevButton = document.querySelector('.button-left');
 var dotsNav = document.querySelector('.carousel_nav');
 var dots = Array.from(dotsNav.children);
-var slideWidth = slides[0].getBoundingClientRect().width;
+var slideWidth = slides[0].getBoundingClientRect().width; //get first child in html element
+
 var addClassToCurrentSlider = document.querySelector('.carousel_track > li:first-child');
-var addClassToCarouselNav = document.querySelector('.carousel_nav > button:first-child');
+var addClassToCarouselNav = document.querySelector('.carousel_nav > button:first-child'); //add class to first child in html element.
+
 addClassToCurrentSlider.classList.add('current-slide');
 addClassToCarouselNav.classList.add('current-slide'); // arrange the slides next to one another
 

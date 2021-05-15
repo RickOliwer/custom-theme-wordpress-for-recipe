@@ -7,9 +7,11 @@ const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
 
+//get first child in html element
 const addClassToCurrentSlider = document.querySelector('.carousel_track > li:first-child');
 const addClassToCarouselNav = document.querySelector('.carousel_nav > button:first-child')
 
+//add class to first child in html element.
 addClassToCurrentSlider.classList.add('current-slide');
 addClassToCarouselNav.classList.add('current-slide');
 

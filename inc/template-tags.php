@@ -63,13 +63,14 @@ if(!function_exists('bootscore_recipe_gallery')){
 
 		$gallerySlider = get_field('gallery');
 
-		$length = count($gallerySlider);
+		
 
 		if(!$gallerySlider){
 			return;
 		}
 
 		?>
+		<div class="gallery-container">
 			<div class="carousel">
 				<i class="fas fa-chevron-left fa-2x carousel_button button-left is-hidden"></i>
 					<div class="carousel_track-container">
@@ -89,11 +90,13 @@ if(!function_exists('bootscore_recipe_gallery')){
 
 
 				<div class="carousel_nav">
+					<?php $length = count($gallerySlider); ?>
 					<?php for($i = 0 ; $i < $length ; $i++) : ?>
 						<button class="carousel_indicator"></button>
 					<?php endfor ; ?>
 				</div>
-    		</div>
+			</div>
+		</div>
 		<?php
 
 	}
