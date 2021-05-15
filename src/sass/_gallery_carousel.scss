@@ -39,16 +39,16 @@
                 }
 
                 .button-left{
-                    left: 0px;
+                    left: 10px;
                     cursor: pointer;
                     z-index: 1;
-                    color: #fff;
+                    color: #333;
                 }
 
                 .button-right{
-                    right: 0px;
+                    right: 10px;
                     z-index: 1;
-                    color: #fff;
+                    color: #333;
 
                 }
 
@@ -89,14 +89,14 @@
                 height: 400px;
                 max-width: 700px;
                     .button-left{
-                        left: 0px;
+                        left: 15px;
                         cursor: pointer;
                         z-index: 1;
                         color: #333;
                     }
 
                     .button-right{
-                        right: 0px;
+                        right: 15px;
                         z-index: 1;
                         color: #333;
 

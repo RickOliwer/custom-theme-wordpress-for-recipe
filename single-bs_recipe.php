@@ -16,7 +16,7 @@
             <!-- Featured Image-->
             <div class="height-75 bg-dark text-light align-items-end dflex mb-0" <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?> <div id="featured-full-image" class="page-full-image" style="background-image: url('<?php echo $thumb['0'];?>')">
 
-                <div class="container align-items-end d-flex h-100 pb-3">
+                <div class="container align-items-end d-flex h-100 pb-3 hero-header-text">
                     <?php the_title('<h1>', '</h1>'); ?>
                 </div>
 

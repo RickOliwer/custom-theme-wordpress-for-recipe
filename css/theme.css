@@ -10963,6 +10963,12 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   }
 }
 
+@media screen and (min-width: 1224px) {
+  .hero-header-text {
+    width: 80%;
+  }
+}
+
 .the-navbar {
   min-height: 8vh;
   font-family: "poppins", sans-serif;
@@ -11175,15 +11181,15 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
   transform: translateY(-50%);
 }
 .gallery-container .carousel .button-left {
-  left: 0px;
+  left: 10px;
   cursor: pointer;
   z-index: 1;
-  color: #fff;
+  color: #333;
 }
 .gallery-container .carousel .button-right {
-  right: 0px;
+  right: 10px;
   z-index: 1;
-  color: #fff;
+  color: #333;
 }
 .gallery-container .carousel .is-hidden {
   display: none;
@@ -11214,13 +11220,13 @@ h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     max-width: 700px;
   }
   .gallery-container .carousel .button-left {
-    left: 0px;
+    left: 15px;
     cursor: pointer;
     z-index: 1;
     color: #333;
   }
   .gallery-container .carousel .button-right {
-    right: 0px;
+    right: 15px;
     z-index: 1;
     color: #333;
   }

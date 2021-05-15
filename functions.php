@@ -12,6 +12,9 @@
 //require get_template_directory() . '/woocommerce/woocommerce-functions.php';
 // WooCommerce End
 
+// include/require
+require_once('inc/recipe-contant.php');
+require_once('inc/recipe-info.php');
 
 // Register Nav Walker class_alias
 if ( ! function_exists( 'register_navwalker' ) ) :
