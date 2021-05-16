@@ -109,15 +109,10 @@
 
 @media screen and (min-width:1224px){
     .gallery-container{
-        height: 100%;
-        float: right;
-        width: 50%;
-        margin-top: 0px;
-        margin-left: 15px;
-        margin-bottom: 45px;
+        height: 650px;
             .carousel{
-                height: 400px;
-                max-width: 550px;
+                height: 650px;
+                max-width: 100%;
                     .button-left{
                         left: -40px;
                         cursor: pointer;
