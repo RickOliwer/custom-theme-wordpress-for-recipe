@@ -47,24 +47,8 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 			);
 
 			echo '<div class="servings input-group mb-3 m-auto">';
-			// printf('<lable for="servings">%s</lable>
-			// 		<input 
-			// 		id="servings" 
-			// 		class="servings-input"
-			// 		name="servings-input" 
-			// 		type="number" 
-			// 		value="2" 
-			// 		min="2" 
-			// 		max="10" 
-			// 		step="2"/>
-			// 		<button class="js-decreaseService">-</button>
-			// 		<button class="js-increaseService">+</button>',
-			// 		__('Servings', 'bootscore'),
-					
-
-			// );
-
 			printf('
+			<i class="fas fa-user-friends fa-lg"></i>
 			<label class="input-group-text" for="servings">%s</label>
 			<select class="form-select servings-input" id="servings">
 			  <option selected>2</option>
@@ -88,8 +72,12 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 			
 				printf('<div class="ingredient-card">
 							<div class="inner-card-left">
-							<div class="value-amount" data-baseValue="%01.1f"><span></span> </div>
-							<span> %s</span>
+								<div class="value-amount" data-baseValue="%01.1f">
+									<span></span>
+								</div>
+								<div class="measurement">
+									<span>%s</span>
+								</div>
 							</div>
 							<div class="inner-card-right">
 								<span>%s</span>

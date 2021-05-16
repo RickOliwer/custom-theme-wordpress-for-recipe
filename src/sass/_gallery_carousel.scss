@@ -1,10 +1,14 @@
 .gallery-container{
     height: 350px;
+    width: 93%;
+    margin: auto;
         .carousel{
             position: relative;
             height: 300px;
             max-width: 450px;
             margin: 0 auto;
+            border-radius: 8px;
+            box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
                 .carousel_track-container{
                     background: transparent;
                     height: 100%;
@@ -27,6 +31,7 @@
                                             height: 100%;
                                             object-fit: cover;
                                             border-radius: 8px;
+                                            
                                         }
                                 }
                         }
@@ -110,6 +115,8 @@
 @media screen and (min-width:1224px){
     .gallery-container{
         height: 650px;
+        width: 45%;
+        margin: 0;
             .carousel{
                 height: 650px;
                 max-width: 100%;

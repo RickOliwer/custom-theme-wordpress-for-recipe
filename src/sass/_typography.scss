@@ -17,12 +17,24 @@ div a,
 h1{
     font-family: 'poppins', sans-serif;
     color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
 }
  
 h2, h3, h4, h5, h6{
     font-family: 'poppins', sans-serif;
     color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.1em !important;
 }
+
+p, li, span {
+    font-family: 'poppins', sans-serif;
+    font-size: .85rem;
+    color: #333;
+
+}
+
 
 .hero-image{
     position: relative;
@@ -46,13 +58,13 @@ h2, h3, h4, h5, h6{
         }
 }
 
-.main-contant{
+.main-content{
     width: 98%;
     margin: auto;
     background-color: #f3f3f7;
 
         @media screen and (min-width:1224px){
-            width: 80%;
+            width: 90%;
         }
 
 }
@@ -61,6 +73,7 @@ h2, h3, h4, h5, h6{
     @media screen and (min-width:1224px){
         width: 80%;
         padding-top: 16px !important;
+        
             .hero-header-text-h1{
                 font-size: 5.5rem;
                 font-family: 'poppins', sans-serif;
@@ -68,17 +81,43 @@ h2, h3, h4, h5, h6{
             }
     }
 }
+.title-text-h1{
+    color: #333;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-transform: none;
+    line-height: 54pt;
+    @media screen and (min-width:1224px){
+        font-size: 6rem;
+        line-height: 74pt;
+        
+    }
+}
 
 .recipe-content{
     margin-bottom: 35px;
+    
+
+    @media screen and (min-width:1224px){
+        display: flex;
+        width: 98%;
+
         .content-container{
+            width: 55% !important;
+            margin-left: 50px !important;
+        }
+    }
+    .content-container{
             margin-bottom: 35px;
+            width: 93%;
+            margin: auto;
             background-color: #fff;
             box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
             border-radius: 8px;
+           
                 .paragraph-container{
                     padding: 40px;
                     
                 }
-        }
+    }
 }

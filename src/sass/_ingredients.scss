@@ -5,29 +5,36 @@
         box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
         transition: 0.3s;
         padding: 15px;
-        margin-bottom: 23px;
-        margin-top: 23px;
+        margin-bottom: 23px !important;
+        margin-top: 23px !important;
         border-radius: 8px;
+        width: 93%;
+        margin: auto;
 
             .servings{
                 width: 93%;
-            }
-            .ingredients-header{
-                padding: 15px;
-            }
-
-            .input-group-text{
-                background-color: #a6a6f0;
-                color: #333;
-                font-family: 'poppins', sans-serif;
-                    &:focus{
-                        border: none;
+                margin: 15px;
+                    .fa-user-friends{
+                        margin: auto;
+                        padding-right: 16px;
                     }
             }
 
-            .servings{
-                margin: 15px;
+            .ingredients-header{
+                padding: 15px;
+                color: #6d6d6d;
+                font-weight: normal;
+                font-size: 1rem;
             }
+
+            .input-group-text{
+                color: #333;
+                font-family: 'poppins', sans-serif;
+                background-color: #fff;
+
+            }
+
+
         
             .ingredient-card{
                 display: flex;
@@ -37,8 +44,8 @@
             
                     .inner-card-left{
                         margin: 10px;
-                        display: flex;
                         width: 40%;
+                        display: flex;
                             .value-amount{
                                 margin-right: 3px;
                             }
@@ -56,11 +63,16 @@
         box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
         transition: 0.3s;
         padding: 15px;
-        margin-bottom: 23px;
-        margin-top: 23px;
+        margin-bottom: 23px !important;
+        margin-top: 23px !important;
         border-radius: 8px;
+        width: 93%;
+        margin: auto;
             .instructions-header{
                 padding: 15px;
+                color: #6d6d6d;
+                font-weight: normal;
+                font-size: 1rem;
             }
         
             .instructions{
@@ -85,6 +97,8 @@
 @media screen and (min-width:1224px){
     .recipe-info{
         display: flex;
+        width: 87.5%;
+        margin: auto;
             .ingredient-container{
                 width: 35%;
                 margin-right: 15px;

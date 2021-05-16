@@ -50,3 +50,115 @@ if(!function_exists('bootscore_recipe_gallery')){
 	}
 }
 // Gallery End.
+
+// Cooking Time
+if(!function_exists('bootscore_recipe_cookingTime')){
+	function bootscore_recipe_cookingTime(){
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		if( have_rows('cooking_time')){
+
+			while(have_rows('cooking_time')){
+				the_row();
+
+				$hours = get_sub_field('hours');
+				$minutes = get_sub_field('minutes');
+
+				//eew
+				if($minutes == null){
+					printf('<div class="cooking-time-container">
+								<div class="cooking-time-icon">
+									<i class="far fa-clock"></i>
+								</div>
+								<div class="cooking-time-content">
+									<p>%d %s</p>
+								</div>
+							</div>',
+						$hours,
+						__('hours', 'bootscore'),
+					);
+				} elseif($hours == null){
+					printf('<div class="cooking-time-container">
+								<div class="cooking-time-icon">
+									<i class="far fa-clock"></i>
+								</div>
+								<div class="cooking-time-content">
+									<span>%d %s</span>
+								</div>
+							</div>',
+						$minutes,
+						__('minutes', 'bootscore'),
+					);
+				} else {
+					printf('<div class="cooking-time-container">
+								<div class="cooking-time-icon">
+									<i class="far fa-clock"></i>
+								</div>
+								<div class="cooking-time-content">
+									<p>%d %s %d %s</p>
+								</div>
+							</div>',
+						$hours,
+						__('h', 'bootscore'),
+						$minutes,
+						__('min', 'bootscore'),
+					);
+				}
+				
+				
+			}
+		}
+	}
+}
+
+// Cooking Time End
+
+// Rating
+if(!function_exists('bootscore_recipe_rating')){
+
+	function bootscore_recipe_rating(){
+
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		$rating = get_field('rating', false, false);
+
+		
+		if(!empty($rating)){
+			if(strpos($rating, '.5') !== false){
+				$halfstar = str_repeat('<i class="far fa-star"></i>', $rating) . '<i class="far fa-star-half"></i>';
+
+				printf('<div class="rating-container">
+						<div class="rating-icon">
+							%s
+						</div>
+						<div class="rating-content">
+							<p>%s</p>
+						</div>
+					</div>',
+					$halfstar,
+					__('Rating', 'bootscore'),
+		
+				);
+			} else {
+
+				printf('<div class="rating-container">
+							<div class="rating-icon">
+								%s
+							</div>
+							<div class="rating-content">
+								<p>%s</p>
+							</div>
+						</div>',
+						str_repeat('<i class="far fa-star"></i>', $rating),
+						__('Rating', 'bootscore'),
+			
+				);
+			}
+		}
+	}
+}
+// Rating End
