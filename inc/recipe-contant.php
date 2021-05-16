@@ -162,3 +162,25 @@ if(!function_exists('bootscore_recipe_rating')){
 	}
 }
 // Rating End
+
+
+// Preamble
+if(!function_exists('bootscore_recipe_preamble')){
+
+	function bootscore_recipe_preamble(){
+
+		if(!function_exists('get_field')){
+			return;
+		}
+
+		$preamble = get_field('preamble', false, false);
+
+		
+		if(!empty($preamble)){
+			printf('<p>%s</p>',
+					$preamble,
+		);
+		}
+	}
+}
+// Preamble End

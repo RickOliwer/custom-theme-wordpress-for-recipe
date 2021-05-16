@@ -96,6 +96,7 @@ p, li, span {
 
 .recipe-content{
     margin-bottom: 35px;
+    margin-top: 35px;
     
 
     @media screen and (min-width:1224px){
@@ -117,7 +118,23 @@ p, li, span {
            
                 .paragraph-container{
                     padding: 40px;
+                        p{
+                            font-size: 1.25rem;
+                        }
                     
                 }
     }
+}
+.the-content{
+    width: 93%;
+    margin: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+        @media screen and (min-width:1224px){
+            width: 87.5%;
+            margin-top: 9.3rem;
+                .the-content-paragraph{
+                    width: 50%;
+                }
+        }
 }
