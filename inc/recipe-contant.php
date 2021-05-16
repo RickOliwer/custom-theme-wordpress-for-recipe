@@ -27,7 +27,9 @@ if(!function_exists('bootscore_recipe_gallery')){
 									//$img = wp_get_attachment_image_src($image['ID'], 'thumbnail');
 									//$img_srcset = wp_get_attachment_image_srcset($image['ID'], 'thumbnail');
 								?>
-								<img src="<?= $image['url']; ?>" class="carousel_image">
+								<a href="<?= $image['url'];?>"  data-lightbox="recipe">
+									<img src="<?= $image['url']; ?>" class="carousel_image">
+								</a>
 							</li>
 							<?php endforeach ; ?>
 						</ul>
