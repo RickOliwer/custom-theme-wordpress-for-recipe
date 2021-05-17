@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * The template for displaying archive pages for Recipes
+	 * The template for displaying archive pages
 	 *
 	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
 	 *
@@ -17,7 +17,6 @@
         <?php bs_after_primary(); ?>  
 
         <div class="row">
-            <?php //get_sidebar(); ?>
             <div class="col">
 
                 <main id="main" class="site-main">
@@ -25,6 +24,7 @@
                     <!-- Title & Description -->
                     <header class="page-header mb-5">
                         <h1 class=""><?php the_archive_title(); ?></h1>
+                        <?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
                     </header>
                     
                     <div class="m-auto w-50 mb-5">
@@ -35,6 +35,7 @@
                     <nav class="category-nav mb-5">
                         <?php bs_recipe_category_badge(); ?>
                     </nav>
+
                     <div class="my-card-container">
                         <div class="my-grid">
                             <!-- Grid Layout -->
@@ -66,6 +67,7 @@
                                                     </small>
                                                 </p>
                                             <?php endif; ?>
+
                                         </div>
                                     </div>
                                 </div>
@@ -73,6 +75,7 @@
                                     <?php endif; ?>
                             </div>
                         </div>
+
                     <!-- Pagination -->
                     <div>
                         <?php bootscore_pagination(); ?>
@@ -82,7 +85,6 @@
 
             </div><!-- col -->
 
-            
         </div><!-- row -->
 
     </div><!-- #primary -->
