@@ -1,0 +1,82 @@
+.my-card-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        .my-grid{
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(1, 15rem);
+            grid-auto-rows: minmax(10rem, auto);
+            grid-gap: 3rem;
+            justify-content: center;
+
+                @media screen and (min-width:765px){
+                    grid-template-columns: repeat(2, 15rem);
+                }
+
+                @media screen and (min-width:1224px){
+                    grid-template-columns: repeat(4, 15rem);
+                }
+        
+                .my-grid-item{
+                    background-color: #fff;
+                    overflow: hidden;
+                    cursor: pointer;
+                    transition: .2s;
+                    width: 15rem;
+                        &:hover{
+                            transform:translateY(-1%);
+        
+                        }
+                        .my-card{
+        
+                                .my-card-img{
+                                    display: block;
+                                    width: 15rem;
+                                    height: 10rem;
+                                    object-fit: cover;
+        
+                                }
+        
+                                .my-card-content{
+                                    padding: 1.2rem;
+                                    width: 15rem;
+                                    height: 12rem;
+                                        .my-card-header{
+                                            font-size: 1rem;
+                                            font-weight: 400;
+                                            color: #333;
+                                            margin-bottom: 1.2rem;
+                                                a{
+        
+                                                }
+                                        }
+        
+                                        .my-card-text{
+                                            
+                                            letter-spacing: 0.1rem;
+                                            
+                                            color: #333;
+                                            margin-bottom: 2.5rem;
+                                                p{
+                                                    font-size: .7rem;
+                                                }
+                                        }
+        
+                                        .my-card-btn{
+                                            display: block;
+                                            width: 100%;
+                                            padding: .8rem;
+                                            font-size: .8rem;
+                                            text-align: center;
+                                            border: 1px solid #808080;
+                                            background: #fff;
+                                                a{
+        
+                                                }
+                                        }
+                                }
+                        }
+                }
+        }
+}

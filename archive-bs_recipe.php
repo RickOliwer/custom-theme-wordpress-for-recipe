@@ -17,60 +17,52 @@
         <?php bs_after_primary(); ?>  
 
         <div class="row">
-            <?php get_sidebar(); ?>
-            <div class="col-md-8 order-first order-md-last">
+            <?php //get_sidebar(); ?>
+            <div class="col">
 
                 <main id="main" class="site-main">
 
                     <!-- Title & Description -->
-                    <header class="page-header mb-4">
-                        <h1><?php the_archive_title(); ?></h1>
+                    <header class="page-header mb-5">
+                        <h1 class=""><?php the_archive_title(); ?></h1>
                     </header>
+                    
+                    <div class="m-auto w-50 mb-5">
+                        <?php require_once('searchform.php');?>
 
-                    <!-- Grid Layout -->
-                    <?php if (have_posts() ) : ?>
-                    <?php while (have_posts() ) : the_post(); ?>
-                    <div class="card horizontal mb-4">
-                        <div class="row">
-                            <!-- Featured Image-->
-                            <?php if (has_post_thumbnail() )
-							echo '<div class="card-img-left-md col-lg-5">' . get_the_post_thumbnail(null, 'medium') . '</div>';
-							?>
-                            <div class="col">
-                                <div class="card-body">
-                                    
-                                    <?php bs_recipe_category_badge(); ?>
-                                    
-                                    <!-- Title -->
-                                    <h2 class="blog-post-title">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <?php the_title(); ?>
-                                        </a>
-                                    </h2>
-                                    <!-- Meta -->
-                                    <?php if ( 'post' === get_post_type() ) : ?>
-                                    <small class="text-muted mb-2">
-                                        <?php
-									bootscore_date();
-									bootscore_author();
-									bootscore_comments();
-									bootscore_edit();
-									?>
-                                    </small>
-                                    <?php endif; ?>
-                                    <!-- Excerpt & Read more -->
-                                    <div class="card-text mt-auto">
-                                        <?php the_excerpt(); ?> <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
+                    </div>
+
+                    <nav class="category-nav mb-5">
+                        <?php bs_recipe_category_badge(); ?>
+                    </nav>
+                    <div class="my-card-container">
+                        <div class="my-grid">
+                            <!-- Grid Layout -->
+                            <?php if (have_posts() ) : ?>
+                            <?php while (have_posts() ) : the_post(); ?>
+                                <div class="my-grid-item">
+                                    <div class="my-card">
+                                        <?php if (has_post_thumbnail() )
+                                            echo '<a href="<?php the_permalink(); ?>">' . get_the_post_thumbnail(null, 'medium', ['class' => 'my-card-img']) . '</a>';
+                                        ?>
+
+                                        <div class="my-card-content">
+                                            <h2 class="my-card-header">
+                                                <a href="<?php the_permalink(); ?>">
+                                                    <?php the_title(); ?>
+                                                </a>
+                                            </h2>
+                                            <div class="my-card-text">
+                                                <?php the_excerpt(); ?>
+                                            </div>
+
+                                        </div>
                                     </div>
-                                    <!-- Tags -->
-                                    <?php bootscore_tags(); ?>
                                 </div>
+                                    <?php endwhile; ?>
+                                    <?php endif; ?>
                             </div>
                         </div>
-                    </div>
-                    <?php endwhile; ?>
-                    <?php endif; ?>
-
                     <!-- Pagination -->
                     <div>
                         <?php bootscore_pagination(); ?>

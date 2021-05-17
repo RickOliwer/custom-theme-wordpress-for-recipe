@@ -11007,6 +11007,27 @@ p, li, span {
   }
 }
 
+.page-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.page-header h1 span, .page-header .h1 span {
+  display: block;
+  margin: auto;
+  text-align: center;
+  font-size: 3rem;
+}
+@media screen and (min-width: 1224px) {
+  .page-header h1, .page-header .h1 {
+    margin: auto;
+  }
+  .page-header h1 span, .page-header .h1 span {
+    font-size: 5rem;
+    display: block;
+  }
+}
+
 .title-text-h1 {
   color: #333;
   font-size: 3rem;
@@ -11071,6 +11092,25 @@ p, li, span {
     width: 60%;
     padding-left: 30px;
   }
+}
+
+.category-nav {
+  margin: auto;
+  margin: 26px 0px 26px 0px;
+}
+.category-nav ul {
+  display: flex;
+  flex-wrap: wrap !important;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  list-style: none;
+  width: 100%;
+  margin: auto;
+  padding: 0;
+}
+.category-nav ul li {
+  margin: 10px;
 }
 
 .the-navbar {
@@ -11467,4 +11507,73 @@ p, li, span {
 }
 .rating-container .rating-content p {
   font-size: 0.9rem !important;
+}
+
+.my-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-card-container .my-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 15rem);
+  grid-auto-rows: minmax(10rem, auto);
+  grid-gap: 3rem;
+  justify-content: center;
+}
+@media screen and (min-width: 765px) {
+  .my-card-container .my-grid {
+    grid-template-columns: repeat(2, 15rem);
+  }
+}
+@media screen and (min-width: 1224px) {
+  .my-card-container .my-grid {
+    grid-template-columns: repeat(4, 15rem);
+  }
+}
+.my-card-container .my-grid .my-grid-item {
+  background-color: #fff;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.2s;
+  width: 15rem;
+}
+.my-card-container .my-grid .my-grid-item:hover {
+  transform: translateY(-1%);
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-img {
+  display: block;
+  width: 15rem;
+  height: 10rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content {
+  padding: 1.2rem;
+  width: 15rem;
+  height: 12rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-header {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 1.2rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-text {
+  letter-spacing: 0.1rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-text p {
+  font-size: 0.7rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-btn {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+  text-align: center;
+  border: 1px solid #808080;
+  background: #fff;
 }

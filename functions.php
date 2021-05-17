@@ -408,6 +408,10 @@ function post_link_attributes($output) {
 add_post_type_support( 'page', 'excerpt' );
 // Excerpt to pages End
 
+function bootscore_excerpt_length($length) {
+	return 10;
+}
+add_filter('excerpt_length', 'bootscore_excerpt_length', 10, 1);
 
 // Breadcrumb
 if ( ! function_exists( 'the_breadcrumb' ) ) :

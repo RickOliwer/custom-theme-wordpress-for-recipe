@@ -28,19 +28,48 @@ if ( ! function_exists( 'bootscore_category_badge' ) ) :
 endif;
 // Category Badge End
 
-// Recipe Badge
+// Recipe Category Nav
 if ( ! function_exists( 'bs_recipe_category_badge' ) ) :
 	function bs_recipe_category_badge() {
-			$recipes = get_the_terms(get_the_ID(), 'bs_recipe_category');
+			$recipes = get_terms('bs_recipe_category');
+			//if(!empty($recipes)){
+				
+			
+		
+            echo '<ul class="">';
+			
+			
+            foreach( $recipes as $recipe ) {
+				$recipe_url = get_term_link($recipe, 'bs_recipe_category');
+				printf(
+					'<li>
+						<a href="%s" class="">%s</a>
+					</li>',
+					$recipe_url,
+					$recipe->name
+				);
+				
+            }
+            echo '</ul>';
+		
+			//}
+	}
+endif;
+// Recipe Category Nav End
+
+// Recipe Tags Badge
+if ( ! function_exists( 'bs_recipe_tags_badge' ) ) :
+	function bs_recipe_tags_badge() {
+			$recipes = get_the_terms(get_the_ID(), 'bs_recipe_tags');
 			if(!$recipes){
 				return;
 			}
 		
-            echo '<div class="category-badge mb-2">';
+            echo '<div class="tags-badge mb-2">';
 			$badges = [];
 			
             foreach( $recipes as $recipe ) {
-				$recipe_url = get_term_link($recipe, 'bs_recipe_category');
+				$recipe_url = get_term_link($recipe, 'bs_recipe_tags');
 				$badge = sprintf(
 					'<a href="%s" class="badge bg-secondary">%s</a>',
 					$recipe_url,
@@ -53,8 +82,7 @@ if ( ! function_exists( 'bs_recipe_category_badge' ) ) :
 		
 	}
 endif;
-// Recipe Badge End
-
+// Recipe Tags Badge End
 
 // Category
 if ( ! function_exists( 'bootscore_category' ) ) :
