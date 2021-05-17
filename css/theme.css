@@ -11536,11 +11536,11 @@ p, li, span {
   background-color: #fff;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.5s;
   width: 15rem;
 }
 .my-card-container .my-grid .my-grid-item:hover {
-  transform: translateY(-1%);
+  transform: translateY(-7%);
 }
 .my-card-container .my-grid .my-grid-item .my-card .my-card-img {
   display: block;

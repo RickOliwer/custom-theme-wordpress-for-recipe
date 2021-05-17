@@ -22,14 +22,15 @@
                     background-color: #fff;
                     overflow: hidden;
                     cursor: pointer;
-                    transition: .2s;
+                    transition: .5s;
                     width: 15rem;
+                    
                         &:hover{
-                            transform:translateY(-1%);
+                            transform:translateY(-7%);
         
                         }
+
                         .my-card{
-        
                                 .my-card-img{
                                     display: block;
                                     width: 15rem;
