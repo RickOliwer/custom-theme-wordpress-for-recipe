@@ -15,6 +15,7 @@
 // include/require
 require_once('inc/recipe-contant.php');
 require_once('inc/recipe-info.php');
+require get_template_directory() . '/inc/acf-loader.php';
 
 // Register Nav Walker class_alias
 if ( ! function_exists( 'register_navwalker' ) ) :
