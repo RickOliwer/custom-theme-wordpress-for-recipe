@@ -1,5 +1,7 @@
 body{
-    background-color: #f3f3f7;
+    //background-color: #f3f3f7;
+    background-color: #ffffff;
+
 }
 
 h2 a,
@@ -61,7 +63,8 @@ p, li, span {
 .main-content{
     width: 98%;
     margin: auto;
-    background-color: #f3f3f7;
+    //background-color: #f3f3f7;
+    background-color: #ffffff;
 
         @media screen and (min-width:1224px){
             width: 90%;
@@ -77,6 +80,7 @@ p, li, span {
             .hero-header-text-h1{
                 font-size: 5.5rem;
                 font-family: 'poppins', sans-serif;
+                letter-spacing: 0.05em;
 
             }
     }
@@ -88,8 +92,9 @@ p, li, span {
     text-transform: none;
     line-height: 54pt;
     @media screen and (min-width:1224px){
-        font-size: 6rem;
-        line-height: 74pt;
+        font-size: 4.6rem;
+        font-weight: normal;
+        line-height: 68pt;
         
     }
 }
@@ -113,11 +118,22 @@ p, li, span {
             width: 93%;
             margin: auto;
             background-color: #fff;
-            box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
-            border-radius: 8px;
+            //box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
+            //border-radius: 8px;
+                .entry-meta{
+
+                        small{
+                            font-size: .85rem;
+                                a{
+                                    
+                                    color: #6c757d !important;
+                                }
+                        }
+                }
            
                 .paragraph-container{
-                    padding: 40px;
+                    padding: 0px 40px 40px 40px;
+                    
                         p{
                             font-size: 1.25rem;
                         }
@@ -133,8 +149,10 @@ p, li, span {
         @media screen and (min-width:1224px){
             width: 87.5%;
             margin-top: 9.3rem;
-                .the-content-paragraph{
-                    width: 50%;
-                }
+            margin-bottom: 7.8rem;
+            .the-content-paragraph{
+                width: 60%;
+                padding-left: 30px;
+            }
         }
 }

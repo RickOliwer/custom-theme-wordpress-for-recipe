@@ -5,14 +5,14 @@
         .rating-icon{
             margin-bottom: 9px;
                 .fa-star{
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     margin: auto !important;
                     align-items: center;
                     justify-content: center;
                     
                 }
                 .fa-star-half{
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     margin: auto !important;
                     align-items: center;
                     justify-content: center;
@@ -21,9 +21,8 @@
 
         .rating-content{
             text-align: center;
-                span{
-                    align-items: center;
-                    justify-content: center;
+                p{
+                    font-size: 0.9rem !important;
                 }
         }
 }

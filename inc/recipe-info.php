@@ -46,19 +46,32 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 			__('Ingredients', 'bootscore'),
 			);
 
-			echo '<div class="servings input-group mb-3 m-auto">';
-			printf('
-			<i class="fas fa-user-friends fa-lg"></i>
-			<label class="input-group-text" for="servings">%s</label>
-			<select class="form-select servings-input" id="servings">
-			  <option selected>2</option>
-			  <option value="4">4</option>
-			  <option value="6">6</option>
-			  <option value="8">8</option>
-			</select>',
-			__('Servings', 'bootscore'),
+			echo '<div class="servings">';
+			// printf('
+			// <i class="fas fa-user-friends fa-lg"></i>
+			// <label class="input-group-text" for="servings">%s</label>
+			// <select class="form-select servings-input" id="servings">
+			//   <option selected>2</option>
+			//   <option value="4">4</option>
+			//   <option value="6">6</option>
+			//   <option value="8">8</option>
+			// </select>',
+			// __('Servings', 'bootscore'),
 
-			);
+			// );
+
+			echo '
+				<div class="custom-selecter">
+					<i class="fas fa-user-friends fa-lg"></i>
+					<select id="servings">
+						<option selected>2</option>
+						<option value="4">4</option>
+						<option value="6">6</option>
+						<option value="8">8</option>
+					</select>
+					<span class="custom-arrow"></span>
+				</div>
+				';
 			echo '</div>';
 
 			//echo '<div class="ingredient-container">';

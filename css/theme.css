@@ -10928,7 +10928,7 @@ Custom checkboxes, radios, range, and select on Mac/iOS Safari if custom Sass co
 }
 
 body {
-  background-color: #f3f3f7;
+  background-color: #ffffff;
 }
 
 h2 a, .h2 a,
@@ -10987,7 +10987,7 @@ p, li, span {
 .main-content {
   width: 98%;
   margin: auto;
-  background-color: #f3f3f7;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 1224px) {
   .main-content {
@@ -11003,6 +11003,7 @@ p, li, span {
   .hero-header-text .hero-header-text-h1 {
     font-size: 5.5rem;
     font-family: "poppins", sans-serif;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -11015,8 +11016,9 @@ p, li, span {
 }
 @media screen and (min-width: 1224px) {
   .title-text-h1 {
-    font-size: 6rem;
-    line-height: 74pt;
+    font-size: 4.6rem;
+    font-weight: normal;
+    line-height: 68pt;
   }
 }
 
@@ -11039,11 +11041,15 @@ p, li, span {
   width: 93%;
   margin: auto;
   background-color: #fff;
-  box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
-  border-radius: 8px;
+}
+.recipe-content .content-container .entry-meta small, .recipe-content .content-container .entry-meta .small {
+  font-size: 0.85rem;
+}
+.recipe-content .content-container .entry-meta small a, .recipe-content .content-container .entry-meta .small a {
+  color: #6c757d !important;
 }
 .recipe-content .content-container .paragraph-container {
-  padding: 40px;
+  padding: 0px 40px 40px 40px;
 }
 .recipe-content .content-container .paragraph-container p {
   font-size: 1.25rem;
@@ -11059,9 +11065,11 @@ p, li, span {
   .the-content {
     width: 87.5%;
     margin-top: 9.3rem;
+    margin-bottom: 7.8rem;
   }
   .the-content .the-content-paragraph {
-    width: 50%;
+    width: 60%;
+    padding-left: 30px;
   }
 }
 
@@ -11163,7 +11171,6 @@ p, li, span {
 
 .recipe-info .ingredient-container {
   background-color: #fff;
-  box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   padding: 15px;
   margin-bottom: 23px !important;
@@ -11173,12 +11180,56 @@ p, li, span {
   margin: auto;
 }
 .recipe-info .ingredient-container .servings {
-  width: 93%;
+  width: 80%;
   margin: 15px;
 }
 .recipe-info .ingredient-container .servings .fa-user-friends {
   margin: auto;
   padding-right: 16px;
+}
+.recipe-info .ingredient-container .servings .custom-selecter {
+  position: relative;
+  display: flex;
+}
+.recipe-info .ingredient-container .servings .custom-selecter select {
+  font-size: 0.85rem;
+  padding: 0.5em 2em 0.5em 0.75em;
+  background: #fff;
+  color: #333;
+  border: 0.5px solid #828282;
+  border-radius: 0px;
+}
+.recipe-info .ingredient-container .servings .custom-selecter .custom-arrow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  background: #969696;
+  height: 100%;
+  width: 3em;
+  pointer-events: none;
+}
+.recipe-info .ingredient-container .servings .custom-selecter .custom-arrow::before,
+.recipe-info .ingredient-container .servings .custom-selecter .custom-arrow::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.recipe-info .ingredient-container .servings .custom-selecter .custom-arrow:before {
+  border-left: 0.45em solid transparent;
+  border-right: 0.45em solid transparent;
+  border-bottom: 0.45em solid #333;
+  top: 36%;
+}
+.recipe-info .ingredient-container .servings .custom-selecter .custom-arrow:after {
+  border-left: 0.45em solid transparent;
+  border-right: 0.45em solid transparent;
+  border-top: 0.45em solid #333;
+  top: 64%;
 }
 .recipe-info .ingredient-container .ingredients-header {
   padding: 15px;
@@ -11194,11 +11245,10 @@ p, li, span {
 .recipe-info .ingredient-container .ingredient-card {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.5px solid #cbcbcb;
   margin: 15px;
 }
 .recipe-info .ingredient-container .ingredient-card .inner-card-left {
-  margin: 10px;
+  margin: 10px 10px 10px 0px;
   width: 40%;
   display: flex;
 }
@@ -11211,7 +11261,6 @@ p, li, span {
 }
 .recipe-info .instructions-container {
   background-color: #fff;
-  box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
   transition: 0.3s;
   padding: 15px;
   margin-bottom: 23px !important;
@@ -11252,7 +11301,6 @@ p, li, span {
   }
   .recipe-info .instructions-container {
     width: 65%;
-    box-shadow: 0 0.1625rem 0.225rem 0 rgba(0, 0, 0, 0.06);
     margin-left: 15px;
   }
 }
@@ -11384,12 +11432,16 @@ p, li, span {
   margin-bottom: 9px;
 }
 .cooking-time-container .cooking-time-icon .fa-clock {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: auto !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
 }
+.cooking-time-container .cooking-time-content p {
+  font-size: 0.9rem !important;
+}
+
 .rating-container {
   display: inline-block;
   margin-bottom: 32px;
@@ -11399,13 +11451,13 @@ p, li, span {
   margin-bottom: 9px;
 }
 .rating-container .rating-icon .fa-star {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: auto !important;
   align-items: center;
   justify-content: center;
 }
 .rating-container .rating-icon .fa-star-half {
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin: auto !important;
   align-items: center;
   justify-content: center;
@@ -11413,7 +11465,6 @@ p, li, span {
 .rating-container .rating-content {
   text-align: center;
 }
-.rating-container .rating-content span {
-  align-items: center;
-  justify-content: center;
+.rating-container .rating-content p {
+  font-size: 0.9rem !important;
 }

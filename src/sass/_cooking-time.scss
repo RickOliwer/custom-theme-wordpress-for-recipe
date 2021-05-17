@@ -5,7 +5,7 @@
         .cooking-time-icon{
             margin-bottom: 9px;
                 .fa-clock{
-                    font-size: 2rem;
+                    font-size: 1.6rem;
                     margin: auto !important;
                     display: flex !important;
                     align-items: center;
@@ -16,8 +16,8 @@
 
         .cooking-time-content{
 
-                span{
-
+                p{
+                    font-size: 0.9rem !important;
                 }
         }
 }

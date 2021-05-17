@@ -1,8 +1,10 @@
+$size: .45em;
+
 .recipe-info{
 
     .ingredient-container{
         background-color: #fff;
-        box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
+        //box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
         transition: 0.3s;
         padding: 15px;
         margin-bottom: 23px !important;
@@ -12,11 +14,62 @@
         margin: auto;
 
             .servings{
-                width: 93%;
+                width: 80%;
                 margin: 15px;
                     .fa-user-friends{
                         margin: auto;
                         padding-right: 16px;
+                    }
+                
+                    .custom-selecter{
+                        position: relative;
+                        display: flex;
+                            select{
+                               font-size: .85rem;
+                               padding: .5em 2em .5em .75em;
+                               background: #fff;
+                               color: #333;
+                               border: 0.5px solid #828282;
+                               border-radius: 0px;
+
+                            }
+                            .custom-arrow{
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                display: block;
+                                background: #969696;
+                                height: 100%;
+                                width: 3em;
+                                pointer-events: none;
+
+                                    
+                            }
+                            .custom-arrow::before, 
+                            .custom-arrow::after{
+                                content: "";
+                                position: absolute;
+                                width: 0;
+                                height: 0;
+                                left: 50%;
+                                top: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+
+                            .custom-arrow:before{
+                                border-left: $size solid transparent;
+                                border-right: $size solid transparent;
+                                border-bottom: $size solid #333;
+                                top: 36%;
+                            }
+
+                            .custom-arrow:after{
+                                border-left: $size solid transparent;
+                                border-right: $size solid transparent;
+                                border-top: $size solid #333;
+                                top: 64%;
+
+                            }
                     }
             }
 
@@ -39,11 +92,11 @@
             .ingredient-card{
                 display: flex;
                 justify-content: space-between;
-                border-bottom: 0.5px solid rgb(203, 203, 203);
+                //border-bottom: 0.5px solid rgb(203, 203, 203);
                 margin: 15px;
             
                     .inner-card-left{
-                        margin: 10px;
+                        margin: 10px 10px 10px 0px;
                         width: 40%;
                         display: flex;
                             .value-amount{
@@ -60,7 +113,7 @@
 
     .instructions-container{
         background-color: #fff;
-        box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
+        //box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
         transition: 0.3s;
         padding: 15px;
         margin-bottom: 23px !important;
@@ -106,7 +159,7 @@
         
             .instructions-container{
                 width: 65%;
-                box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
+                //box-shadow: 0 .1625rem .225rem 0 rgba(0,0,0,.06);
                 margin-left: 15px;
 
             }
