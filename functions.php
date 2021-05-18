@@ -93,7 +93,7 @@ if ( ! function_exists( 'bootscore_setup' ) ) :
         // add theme support for custom header image.
         add_theme_support('custom-header', [
             'height' => 500,
-            'widht' => 2560,
+            'width' => 2560,
         ]);
 
 	}

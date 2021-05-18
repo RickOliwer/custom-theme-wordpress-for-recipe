@@ -55,6 +55,7 @@
                         <!-- Recipe info -->
                         <div class="recipe-info">
                             <div class="ingredient-container">
+                                <?php bootscore_recipe_servings(); ?>
                                 <?php bootscore_recipe_ingredient(); ?>
                             </div>
                             <div class="instructions-container">

@@ -12,22 +12,68 @@ if(!function_exists('bootscore_recipe_servings')){
 			);
 
 			echo '<div class="servings">';
-			printf('<lable for="servings">%s</lable>
-					<input 
-					id="servings" 
-					class="servings-input"
-					name="servings-input" 
-					type="number" 
-					value="%s" 
-					min="2" 
-					max="10" 
-					step="2"/>
-					<button class="js-decreaseService">-</button>
-					<button class="js-increaseService">+</button>',
-					__('Servings', 'bootscore'),
-					$servings,
+			if($servings == 2){
 
-			);
+				printf('
+						<div class="custom-selecter">
+							<i class="fas fa-user-friends fa-lg"></i>
+							<select id="servings">
+								<option value="2" selected>2</option>
+								<option value="4">4</option>
+								<option value="8">8</option>
+								<option value="10">10</option>
+							</select>
+							<span class="custom-arrow"></span>
+						</div>',
+						
+	
+				);
+			} elseif ($servings == 4){
+				printf('
+						<div class="custom-selecter">
+							<i class="fas fa-user-friends fa-lg"></i>
+							<select id="servings">
+								<option value="2" >2</option>
+								<option value="4" selected>4</option>
+								<option value="8">8</option>
+								<option value="10">10</option>
+							</select>
+							<span class="custom-arrow"></span>
+						</div>',
+						
+	
+				);
+			} elseif($servings == 8){
+				printf('
+					<div class="custom-selecter">
+						<i class="fas fa-user-friends fa-lg"></i>
+						<select id="servings">
+							<option value="2">2</option>
+							<option value="4">4</option>
+							<option value="8" selected>8</option>
+							<option value="10">10</option>
+						</select>
+						<span class="custom-arrow"></span>
+					</div>',
+				
+
+				);
+			} else {
+				printf('
+					<div class="custom-selecter">
+						<i class="fas fa-user-friends fa-lg"></i>
+						<select id="servings">
+							<option value="2">2</option>
+							<option value="4">4</option>
+							<option value="8" >8</option>
+							<option value="10" selected>10</option>
+						</select>
+						<span class="custom-arrow"></span>
+					</div>',
+			
+
+				);
+			}
 			echo '</div>';
 		}
 	}
@@ -42,50 +88,39 @@ if(!function_exists('bootscore_recipe_ingredient')) {
 		}
 		if ( have_rows('ingredients')){
 
-			printf('<h4 class="ingredients-header">%s</h4>',
-			__('Ingredients', 'bootscore'),
-			);
-
-			echo '<div class="servings">';
-			// printf('
-			// <i class="fas fa-user-friends fa-lg"></i>
-			// <label class="input-group-text" for="servings">%s</label>
-			// <select class="form-select servings-input" id="servings">
-			//   <option selected>2</option>
-			//   <option value="4">4</option>
-			//   <option value="6">6</option>
-			//   <option value="8">8</option>
-			// </select>',
-			// __('Servings', 'bootscore'),
-
+			// printf('<h4 class="ingredients-header">%s</h4>',
+			// __('Ingredients', 'bootscore'),
 			// );
 
-			echo '
-				<div class="custom-selecter">
-					<i class="fas fa-user-friends fa-lg"></i>
-					<select id="servings">
-						<option selected>2</option>
-						<option value="4">4</option>
-						<option value="6">6</option>
-						<option value="8">8</option>
-					</select>
-					<span class="custom-arrow"></span>
-				</div>
-				';
-			echo '</div>';
+			// echo '<div class="servings">';
 
-			//echo '<div class="ingredient-container">';
+			// echo '
+			// 	<div class="custom-selecter">
+			// 		<i class="fas fa-user-friends fa-lg"></i>
+			// 		<select id="servings">
+			// 			<option value="2"selected>2</option>
+			// 			<option value="4">4</option>
+			// 			<option value="6">6</option>
+			// 			<option value="8">8</option>
+			// 		</select>
+			// 		<span class="custom-arrow"></span>
+			// 	</div>
+			// 	';
+			// echo '</div>';
+
 			while(have_rows('ingredients')){
 				the_row();
 
-				$amounts = get_sub_field('amount');
+				$amount = get_sub_field('amount');
 				$measurement = get_sub_field('measurement');
 				$ingredient = get_sub_field('ingredient');
+				$servings = get_field('servings', false, false);
+				$amounts = $amount / $servings;
 
 			
 				printf('<div class="ingredient-card">
 							<div class="inner-card-left">
-								<div class="value-amount" data-baseValue="%01.1f">
+								<div class="value-amount" data-baseValue="%f">
 									<span></span>
 								</div>
 								<div class="measurement">

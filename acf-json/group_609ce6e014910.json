@@ -6,29 +6,35 @@
             "key": "field_609d3e9e86503",
             "label": "Servings",
             "name": "servings",
-            "type": "number",
+            "type": "select",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "min": 2,
-            "max": 10,
-            "step": 2
+            "choices": {
+                "2": "2",
+                "4": "4",
+                "8": "8",
+                "10": "10"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_609ce6f92a0c7",
             "label": "Ingredients",
             "name": "ingredients",
             "type": "repeater",
-            "instructions": "Here you will list the ingredients.\r\nMake sure to do the proportions for 1 serving only",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -61,7 +67,7 @@
                     "append": "",
                     "min": "",
                     "max": "",
-                    "step": "0.5"
+                    "step": ""
                 },
                 {
                     "key": "field_609ce8112a0c9",
@@ -205,5 +211,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1621252731
+    "modified": 1621370748
 }
