@@ -11550,15 +11550,31 @@ p, li, span {
      object-fit: cover;
 }
 .my-card-container .my-grid .my-grid-item .my-card .my-card-content {
-  padding: 1.2rem;
+  padding: 0.4rem;
   width: 15rem;
   height: 12rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-entry-meta {
+  margin-bottom: 0.4rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-entry-meta .text-muted {
+  color: #6c757d !important;
+  font-size: 0.6rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-entry-meta .text-muted time {
+  font-size: 0.6rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-entry-meta .text-muted span {
+  font-size: 0.6rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-entry-meta .text-muted a {
+  font-size: 0.6rem;
 }
 .my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-header {
   font-size: 1rem;
   font-weight: 400;
   color: #333;
-  margin-bottom: 1.2rem;
+  margin-bottom: 0.9rem;
 }
 .my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-text {
   letter-spacing: 0.1rem;

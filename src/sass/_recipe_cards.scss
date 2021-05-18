@@ -40,19 +40,40 @@
                                 }
         
                                 .my-card-content{
-                                    padding: 1.2rem;
+                                    padding: .4rem;
                                     width: 15rem;
                                     height: 12rem;
+                                        .my-card-entry-meta{
+                                            margin-bottom: .4rem;
+                                                .text-muted{
+                                                    color: #6c757d !important;
+                                                    font-size: 0.6rem;
+                                                    
+                                                        time{
+                                                            font-size: 0.6rem;
+                                                        }
+
+                                                        span{
+                                                            font-size: 0.6rem;
+
+                                                        }
+
+                                                        a{
+                                                            font-size: 0.6rem;
+
+                                                        }
+                                                }
+                                        }
                                         .my-card-header{
                                             font-size: 1rem;
                                             font-weight: 400;
                                             color: #333;
-                                            margin-bottom: 1.2rem;
+                                            margin-bottom: .9rem;
                                                 a{
         
                                                 }
                                         }
-        
+                                        
                                         .my-card-text{
                                             
                                             letter-spacing: 0.1rem;
