@@ -24,7 +24,7 @@
 
                     <!-- Title & Description -->
                     <header class="page-header mb-5">
-                        <h1 class=""><?php the_archive_title(); ?></h1>
+                        <h1 class=""><?php post_type_archive_title(''); ?></h1>
                     </header>
                     
                     <div class="m-auto w-50 mb-5">

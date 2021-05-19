@@ -23,8 +23,7 @@
 
                     <!-- Title & Description -->
                     <header class="page-header mb-5">
-                        <h1 class=""><?php the_archive_title(); ?></h1>
-                        <?php the_archive_description( '<div class="archive-description">', '</div>' ); ?>
+                        <h1 class=""><?php single_term_title('Tag: ', true); ?></h1>
                     </header>
                     
                     <div class="m-auto w-50 mb-5">
@@ -34,7 +33,7 @@
                     </div>
 
                     <nav class="category-nav mb-5">
-                        <?php bs_recipe_category_badge(); ?>
+                        <?php bs_recipe_tags_badge(); ?>
                     </nav>
 
                     <div class="my-card-container">

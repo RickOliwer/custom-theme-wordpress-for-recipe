@@ -16,6 +16,12 @@
 
                 @media screen and (min-width:1224px){
                     grid-template-columns: repeat(4, 15rem);
+                        .my-grid-item{
+
+                                &:hover{
+                                    transform:translateY(-7%);
+                                }
+                        }
                 }
         
                 .my-grid-item{
@@ -25,9 +31,7 @@
                     transition: .5s;
                     width: 15rem;
                     
-                        &:hover{
-                            transform:translateY(-7%);
-                        }
+                        
 
                         .my-card{
                                 .my-card-img{

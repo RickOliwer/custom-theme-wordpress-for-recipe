@@ -15,7 +15,7 @@
                 }
 
                 img{
-                    min-height: 23vh;
+                    min-height: 33vh;
                     width: 100%;
                     object-fit: cover;
 
@@ -30,6 +30,10 @@
                     display: flex;
                     justify-content: center;
                     z-index: 10;
+                        h1{
+                            color: #fff;
+
+                        }
                 }
         }
         .the-navbar{

@@ -1,6 +1,6 @@
 <?php
 	/**
-	 * The template for displaying archive pages
+	 * The template for displaying archive pages for Recipes
 	 *
 	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
 	 *
@@ -17,26 +17,14 @@
         <?php bs_after_primary(); ?>  
 
         <div class="row">
-            <div class="col">
+            <div class="col-md-8 col-xxl-9">
 
                 <main id="main" class="site-main">
 
-                    <!-- Title & Description -->
-                    <header class="page-header mb-5">
-                        <h1 class=""><?php single_term_title('Category: ', true); ?></h1>
-                    </header>
-                    
-                    <div class="m-auto w-50 mb-5">
-                        <?php 
-                            get_template_part('template-parts/searchform');
-                        ?>
-
-                    </div>
 
                     <nav class="category-nav mb-5">
                         <?php bs_recipe_category_badge(); ?>
                     </nav>
-
                     <div class="my-card-container">
                         <div class="my-grid">
                             <!-- Grid Layout -->
@@ -69,16 +57,13 @@
                                                 <div class="my-card-text">
                                                     <?php the_excerpt(); ?>
                                                 </div>
-
-
                                             </div>
                                         </div>
                                     </div>
                                 <?php endwhile; ?>
                             <?php endif; ?>
                         </div>
-                        </div>
-
+                    </div>
                     <!-- Pagination -->
                     <div>
                         <?php bootscore_pagination(); ?>
@@ -87,7 +72,8 @@
                 </main><!-- #main -->
 
             </div><!-- col -->
-
+            <?php get_sidebar(); ?>
+            
         </div><!-- row -->
 
     </div><!-- #primary -->
