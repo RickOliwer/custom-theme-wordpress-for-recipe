@@ -88,17 +88,22 @@ if ( ! function_exists( 'bootscore_setup' ) ) :
         add_theme_support('custom-logo', [
             'height' => 50,
             'width' => 200,
+
         ]);
 
         // add theme support for custom header image.
         add_theme_support('custom-header', [
+            'header-text' => true,
             'height' => 500,
             'width' => 2560,
+            'flex-height' => true,
+            'flex-width' => true,
         ]);
 
 	}
 endif;
 add_action( 'after_setup_theme', 'bootscore_setup' );
+
 
 function ir_navbar_logo(){
     $logo_id = get_theme_mod('custom_logo');
@@ -495,4 +500,21 @@ if ( ! function_exists( 'bs_comment_links_in_new_tab' ) ) :
     add_filter('comment_text', 'bs_comment_links_in_new_tab');
 endif;
 // Open links in comments in new tab
+
+
+function cptui_support_author_archive( $query ) {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( is_author() ) {
+		$query->set(
+			'post_type', [
+				'post',
+				'bs_recipe',
+			]
+		);
+	}
+}
+add_action( 'pre_get_posts', 'cptui_support_author_archive' );
 

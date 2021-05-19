@@ -29,10 +29,22 @@
 									printf( esc_html__( 'Search Results for: %s', 'bootscore' ), '<span class="text-secondary">' . get_search_query() . '</span>' );
 									?>
                         </h1>
-                    </header>
+					</header>
+					<div class="m-auto w-50 mb-5">
+                        <?php 
+                            get_template_part('template-parts/searchform');
+                        ?>
 
+                    </div>
+					<nav class="category-nav mb-5">
+                        <?php bs_recipe_tags_badge(); ?>
+                    </nav>
+					
+					<div class="my-card-container">
+					<div class="my-grid">
                     <?php
 					/* Start the Loop */
+
 					while ( have_posts() ) :
 						the_post();
 					
@@ -44,6 +56,10 @@
 						get_template_part( 'template-parts/content', 'search' );
 					
 					endwhile;
+					?> 
+					</div>
+					</div>
+					<?php
 					
 					bootscore_pagination();
 				
@@ -57,7 +73,7 @@
                 </main><!-- #main -->
 
             </div><!-- col -->
-            <?php get_sidebar(); ?>
+
         </div><!-- row -->
 
     </div><!-- #primary -->

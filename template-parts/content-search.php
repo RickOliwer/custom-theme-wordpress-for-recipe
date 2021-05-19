@@ -9,40 +9,32 @@
 	
 	?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="card horizontal mb-4">
-		<div class="row">
-			<!-- Featured Image-->
-			<?php if (has_post_thumbnail() )
-				echo '<div class="card-img-left-md col-lg-5">' . get_the_post_thumbnail(null, 'medium') . '</div>';
+	<div class="my-grid-item">
+		<div class="my-card">
+			<a href="<?php the_permalink(); ?>">
+				<?php if (has_post_thumbnail() )
+					echo get_the_post_thumbnail(null, 'medium', ['class' => 'my-card-img']);
 				?>
-			<div class="col">
-				<div class="card-body">
-					
-                    <?php bootscore_category_badge(); ?>
-                    
-					<!-- Title -->
-					<h2 class="blog-post-title">
-						<a href="<?php the_permalink(); ?>">
+			</a>
+			<div class="my-card-content">
+				<?php if ( 'bs_recipe' === get_post_type() ) : ?>
+					<p class="entry-meta my-card-entry-meta">
+						<small class="text-muted">
+							<?php
+								bootscore_date();
+								_e(' by ', 'bootscore'); the_author_posts_link();
+								bootscore_comment_count();							
+							?>
+						</small>
+					</p>
+				<?php endif; ?>
+				<h2 class="my-card-header">
+					<a href="<?php the_permalink(); ?>">
 						<?php the_title(); ?>
-						</a>
-					</h2>
-					<!-- Meta -->
-					<?php if ( 'post' === get_post_type() ) : ?>
-					<small class="text-muted mb-2">
-					<?php
-						bootscore_date();
-						bootscore_author();
-						bootscore_comments();
-						bootscore_edit();
-						?>
-					</small>
-					<?php endif; ?>	
-					<!-- Excerpt & Read more -->
-					<div class="card-text mt-auto">
-						<?php the_excerpt(); ?> <a class="read-more" href="<?php the_permalink(); ?>"><?php _e('Read more »', 'bootscore'); ?></a>
-					</div>
-					<!-- Tags -->
-					<?php bootscore_tags(); ?>
+					</a>
+				</h2>
+				<div class="my-card-text">
+					<?php the_excerpt(); ?>
 				</div>
 			</div>
 		</div>

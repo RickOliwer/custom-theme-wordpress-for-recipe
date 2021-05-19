@@ -11055,6 +11055,7 @@ p, li, span {
   .recipe-content .content-container {
     width: 55% !important;
     margin-left: 50px !important;
+    margin-top: 0px !important;
   }
 }
 .recipe-content .content-container {
@@ -11113,6 +11114,35 @@ p, li, span {
   margin: 10px;
 }
 
+.site-header #hero-img {
+  position: relative;
+}
+.site-header #hero-img::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+.site-header #hero-img img {
+  min-height: 23vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.site-header #hero-img .hero-header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+}
 .site-header .the-navbar {
   min-height: 8vh;
   font-family: "poppins", sans-serif;
