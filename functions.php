@@ -29,7 +29,7 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 require_once('inc/comment-list.php');
 
 
-if ( ! function_exists( 'bootscore_setup' ) ) :
+//if ( ! function_exists( 'bootscore_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -101,7 +101,7 @@ if ( ! function_exists( 'bootscore_setup' ) ) :
         ]);
 
 	}
-endif;
+//endif;
 add_action( 'after_setup_theme', 'bootscore_setup' );
 
 
