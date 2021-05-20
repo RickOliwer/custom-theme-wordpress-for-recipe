@@ -6,16 +6,15 @@ $top_recipes = new WP_Query([
     'posts_per_page' => 4,
     'orderby' => 'meta_value_num',
     'order' => 'DESC',
-    'meta_query' => array(
+    'meta_query' => [
         'relation' => 'OR',
-        array(
+        [
             'key'     => 'rating',
             'value'   => array( 3, 5 ),
             'type'    => 'DECIMAL',
             'compare' => 'BETWEEN',
-            
-        ),
-    ),
+        ],
+    ],
     
 
 
@@ -27,7 +26,9 @@ if(!$top_recipes->have_posts()){
 ?>
     
     <h5 style="padding-left: 5.95rem; font-size: 1rem; margin-bottom: .9rem;">
-        <?php echo __( 'iRecipe favorites', 'bootscore' ); ?>
+        <?php 
+        _e(' iRecipe favorites ', 'bootscore'); 
+        ?>
     
     </h5>
 <div class="my-card-container">

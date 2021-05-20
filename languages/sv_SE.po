@@ -1,18 +1,19 @@
-# Copyright (C) 2021 Bastian Kreiter
+# Copyright (C) 2017 Automattic
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bootScore 5 5.0.1.2\n"
+"Project-Id-Version: _s 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/irecipe\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2021-05-20T18:10:31+00:00\n"
+"PO-Revision-Date: 2021-05-20 20:19+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv_SE\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-05-20T18:10:31+00:00\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.4.0\n"
-"X-Domain: bootscore\n"
+"X-Generator: Poedit 2.4.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #. Theme Name of the theme
 msgid "bootScore 5"
@@ -23,7 +24,15 @@ msgid "https://bootscore.me/"
 msgstr ""
 
 #. Description of the theme
-msgid "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a href=\"https://bootscore.me/category/documentation/\" target=\"_blank\">Documentation</a>. This theme gives you full control whatever you do and the full freedom to design whatever you want. It comes with a wide selection of category, page, post, author and archive templates as well as sidebar, header, footer and 404 widgets. There are no customizer settings in the backend. All settings can only be made by touching the code. Some CSS, HTML, PHP and JS Skills are required to customize it."
+msgid ""
+"A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. <a "
+"href=\"https://bootscore.me/category/documentation/\" target=\"_blank"
+"\">Documentation</a>. This theme gives you full control whatever you do and "
+"the full freedom to design whatever you want. It comes with a wide selection "
+"of category, page, post, author and archive templates as well as sidebar, "
+"header, footer and 404 widgets. There are no customizer settings in the "
+"backend. All settings can only be made by touching the code. Some CSS, HTML, "
+"PHP and JS Skills are required to customize it."
 msgstr ""
 
 #. Author of the theme
@@ -42,10 +51,7 @@ msgstr ""
 msgid "Back Home &raquo;"
 msgstr ""
 
-#: archive.php:63
-#: category.php:61
-#: index.php:78
-#: index.php:134
+#: archive.php:63 category.php:61 index.php:78 index.php:134
 #: template-parts/content-search-copy.php:42
 #: unused-template-files/archive-equal-height-sidebar-right.php:62
 #: unused-template-files/archive-equal-height.php:63
@@ -61,22 +67,19 @@ msgstr ""
 #: unused-template-files/category-masonry.php:63
 #: unused-template-files/category-sidebar-left.php:63
 msgid "Read more »"
-msgstr ""
+msgstr "Läs mer »"
 
-#: author.php:48
-#: single.php:29
-#: template-parts/content-archive-bs_recipe.php:14
+#: author.php:48 single.php:29 template-parts/content-archive-bs_recipe.php:14
 #: template-parts/content-blog-front-page.php:34
 #: template-parts/content-search.php:25
 #: template-parts/content-single-bs_recipe.php:12
-#: template-parts/top-bs_recipe.php:53
-#: unused-template-files/home.php:46
+#: template-parts/top-bs_recipe.php:53 unused-template-files/home.php:46
 #: unused-template-files/single-full-width-image.php:38
 #: unused-template-files/single-sidebar-left.php:31
 #: unused-template-files/single-sidebar-none.php:28
 #: unused-template-files/singleolder-bs_recipe.php:37
 msgid " by "
-msgstr ""
+msgstr " av "
 
 #. translators: %s: post title
 #: comments.php:34
@@ -92,18 +95,15 @@ msgid_plural "%1$s Comments on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:55
-#: comments.php:73
+#: comments.php:55 comments.php:73
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:58
-#: comments.php:76
+#: comments.php:58 comments.php:76
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:59
-#: comments.php:77
+#: comments.php:59 comments.php:77
 msgid "Newer Comments"
 msgstr ""
 
@@ -112,8 +112,7 @@ msgid "Comments are closed."
 msgstr ""
 
 #. translators: %s: post title
-#: comments.php:98
-#: inc/template-tags.php:193
+#: comments.php:98 inc/template-tags.php:193
 msgid "Leave a Comment"
 msgstr ""
 
@@ -135,7 +134,7 @@ msgstr ""
 
 #: comments.php:121
 msgid "Name*"
-msgstr ""
+msgstr "Namn*"
 
 #: comments.php:125
 msgid "Email* (will not be published)"
@@ -143,7 +142,7 @@ msgstr ""
 
 #: comments.php:130
 msgid "Website"
-msgstr ""
+msgstr "Hemsida"
 
 #: functions.php:69
 msgid "Main Menu"
@@ -157,14 +156,8 @@ msgstr ""
 msgid "Top Nav"
 msgstr ""
 
-#: functions.php:152
-#: functions.php:164
-#: functions.php:176
-#: functions.php:188
-#: functions.php:200
-#: functions.php:212
-#: functions.php:224
-#: functions.php:236
+#: functions.php:152 functions.php:164 functions.php:176 functions.php:188
+#: functions.php:200 functions.php:212 functions.php:224 functions.php:236
 #: functions.php:248
 msgid "Add widgets here."
 msgstr ""
@@ -199,11 +192,11 @@ msgstr ""
 
 #: functions.php:246
 msgid "404 Page"
-msgstr ""
+msgstr "404 Sida"
 
 #: functions.php:457
 msgid "Password"
-msgstr ""
+msgstr "Lösenord"
 
 #: functions.php:458
 msgid "Submit"
@@ -214,9 +207,7 @@ msgid "Pingback:"
 msgstr ""
 
 #. translators: %s: Name of current post. Only visible to screen readers
-#: inc/comment-list.php:32
-#: inc/comment-list.php:57
-#: inc/template-tags.php:222
+#: inc/comment-list.php:32 inc/comment-list.php:57 inc/template-tags.php:222
 msgid "Edit"
 msgstr ""
 
@@ -234,37 +225,37 @@ msgid "Your comment is awaiting moderation."
 msgstr ""
 
 #: inc/comment-list.php:111
-msgid "Save my name, email, and website in this browser for the next time I comment."
+msgid ""
+"Save my name, email, and website in this browser for the next time I comment."
 msgstr ""
 
 #: inc/recipe-contant.php:80
 msgid "hours"
-msgstr ""
+msgstr "timmar"
 
 #: inc/recipe-contant.php:92
 msgid "minutes"
-msgstr ""
+msgstr "minuter"
 
 #: inc/recipe-contant.php:104
 msgid "h"
-msgstr ""
+msgstr "tim"
 
 #: inc/recipe-contant.php:106
 msgid "min"
-msgstr ""
+msgstr "min"
 
-#: inc/recipe-contant.php:143
-#: inc/recipe-contant.php:157
+#: inc/recipe-contant.php:143 inc/recipe-contant.php:157
 msgid "Rating"
-msgstr ""
+msgstr "Betyg"
 
 #: inc/recipe-info.php:11
 msgid "Ingredients"
-msgstr ""
+msgstr "Ingredienser"
 
 #: inc/recipe-info.php:156
 msgid "Instructions"
-msgstr ""
+msgstr "Instruktioner "
 
 #. translators: used between list items, there is a space after the comma
 #: inc/template-tags.php:122
@@ -274,7 +265,7 @@ msgstr ""
 #: inc/template-tags.php:168
 msgctxt "post author"
 msgid "by %s"
-msgstr ""
+msgstr "av %s"
 
 #: inc/template-tags.php:250
 msgid "Leave a comment"
@@ -307,14 +298,16 @@ msgstr ""
 
 #: languages/plugin-translations.php:2
 msgid "All"
-msgstr ""
+msgstr "Alla"
 
 #: languages/plugin-translations.php:3
 msgid "Look what I found: "
 msgstr ""
 
 #: languages/plugin-translations.php:4
-msgid "Cookies help us deliver our services. By using our services, you agree to our use of cookies."
+msgid ""
+"Cookies help us deliver our services. By using our services, you agree to "
+"our use of cookies."
 msgstr ""
 
 #: languages/plugin-translations.php:5
@@ -327,7 +320,7 @@ msgstr ""
 
 #: languages/plugin-translations.php:7
 msgid "Accept"
-msgstr ""
+msgstr "Acceptera"
 
 #. Template Name of the theme
 msgid "Blank with container"
@@ -336,11 +329,10 @@ msgstr ""
 #: page-templates/page-blank-with-container.php:21
 #: page-templates/page-blank-without-container.php:21
 #: page-templates/page-sidebar-left.php:38
-#: page-templates/page-sidebar-right.php:37
-#: page.php:38
+#: page-templates/page-sidebar-right.php:37 page.php:38
 #: template-parts/content-static-front-page.php:37
 msgid "Pages:"
-msgstr ""
+msgstr "Sidor:"
 
 #. Template Name of the theme
 msgid "Blank without container"
@@ -361,7 +353,7 @@ msgstr ""
 #. translators: %s: search query.
 #: search.php:29
 msgid "Search Results for: %s"
-msgstr ""
+msgstr "Sök Resultat: %s"
 
 #: template-parts/content-none.php:14
 msgid "Nothing Found for"
@@ -369,32 +361,37 @@ msgstr ""
 
 #. translators: 1: link to WP admin new post page.
 #: template-parts/content-none.php:25
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
 
 #: template-parts/content-none.php:37
-msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
 msgstr ""
 
 #: template-parts/content-none.php:43
-msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
 msgstr ""
 
 #: template-parts/searchform.php:3
 msgid "Search"
-msgstr ""
+msgstr "Sök"
 
 #: template-parts/top-bs_recipe.php:30
 msgid " iRecipe favorites "
-msgstr ""
+msgstr " iRecipes Favoriter"
 
 #: unused-template-files/copy-author.php:72
 msgid "Read more"
-msgstr ""
+msgstr "Läs mer"
 
 #: unused-template-files/header-example.php:81
 msgid "Close menu"
-msgstr ""
+msgstr "Stäng meny"
 
 #. Template Name of the theme
 msgid "Full width image"
