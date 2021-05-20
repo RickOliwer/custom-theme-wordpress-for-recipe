@@ -1,7 +1,6 @@
 .site-header{
         #hero-img{
             position: relative;
-
                 &::after{
                     content: "";
                     display: block;
@@ -24,8 +23,8 @@
 
                 .hero-header-text{
                     position: absolute;
-                    top: 50%;
-                    left: 50%;
+                    top: 70%;
+                    left: 45%;
                     transform: translate(-50%, -50%);
                     display: flex;
                     justify-content: center;
@@ -102,6 +101,12 @@
         
             .burger{
                 display: block;
+            }
+            .hero-header-text{
+                
+                    h1{
+                        font-size: 1rem;
+                    }
             }
         }
         

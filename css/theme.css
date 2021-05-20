@@ -11126,8 +11126,8 @@ p, li, span {
 }
 .site-header #hero-img .hero-header-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 70%;
+  left: 45%;
   transform: translate(-50%, -50%);
   display: flex;
   justify-content: center;
@@ -11193,6 +11193,9 @@ p, li, span {
   }
   .site-header .burger {
     display: block;
+  }
+  .site-header .hero-header-text h1, .site-header .hero-header-text .h1 {
+    font-size: 1rem;
   }
 }
 .site-header .nav-show {
@@ -11546,7 +11549,7 @@ p, li, span {
     grid-template-columns: repeat(2, 15rem);
   }
 }
-@media screen and (min-width: 1224px) {
+@media screen and (min-width: 1200px) {
   .my-card-container .my-grid {
     grid-template-columns: repeat(4, 15rem);
   }
