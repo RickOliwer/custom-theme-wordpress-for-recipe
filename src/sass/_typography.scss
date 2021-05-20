@@ -16,6 +16,12 @@ div a,
         }
 }
 
+.page-item.active .page-link{
+    color: #fff;
+    background-color: #7777ae;
+    border-color: #7777ae;
+}
+
 h1{
     font-family: 'poppins', sans-serif;
     color: #333;
@@ -175,9 +181,16 @@ p, li, span {
             width: 100%;
             margin: auto;
             padding: 0;
+
                 li{
                     margin:  10px;
 
+                    text-transform: lowercase;
+                        &::first-letter{
+                            text-transform: uppercase;
+                        }
+                
                 }
         }
 }
+

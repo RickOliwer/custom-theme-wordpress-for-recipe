@@ -10944,6 +10944,12 @@ div a:hover,
   color: #7777ae;
 }
 
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #7777ae;
+  border-color: #7777ae;
+}
+
 h1, .h1 {
   font-family: "poppins", sans-serif;
   color: #333;
@@ -11092,6 +11098,10 @@ p, li, span {
 }
 .category-nav ul li {
   margin: 10px;
+  text-transform: lowercase;
+}
+.category-nav ul li::first-letter {
+  text-transform: uppercase;
 }
 
 .site-header #hero-img {
@@ -11122,6 +11132,7 @@ p, li, span {
   display: flex;
   justify-content: center;
   z-index: 10;
+  max-width: 62rem;
 }
 .site-header #hero-img .hero-header-text h1, .site-header #hero-img .hero-header-text .h1 {
   color: #fff;
@@ -11129,6 +11140,7 @@ p, li, span {
 .site-header .the-navbar {
   min-height: 8vh;
   font-family: "poppins", sans-serif;
+  background-color: #fff !important;
 }
 .site-header .the-navbar .logo {
   letter-spacing: 3px;
@@ -11166,7 +11178,7 @@ p, li, span {
     right: 0px;
     height: 92vh;
     top: 8vh;
-    background-color: #f8f9fa;
+    background-color: #fff;
     display: flex;
     flex-direction: column !important;
     align-items: center;
@@ -11586,17 +11598,38 @@ p, li, span {
 .my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-text {
   letter-spacing: 0.1rem;
   color: #333;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 .my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-text p {
   font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
 }
-.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-btn {
-  display: block;
-  width: 100%;
-  padding: 0.8rem;
-  font-size: 0.8rem;
-  text-align: center;
-  border: 1px solid #808080;
-  background: #fff;
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-rating .rating-container {
+  margin: 0;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-rating .rating-container .rating-icon .far {
+  font-size: 1rem;
+}
+.my-card-container .my-grid .my-grid-item .my-card .my-card-content .my-card-rating .rating-container .rating-content {
+  display: none;
+}
+
+.footer_widget .tagcloud {
+  display: flex;
+  flex-direction: column;
+  flex-flow: column wrap;
+  max-height: 250px;
+  max-width: 300px;
+}
+.footer_widget .tagcloud .tag-cloud-link {
+  font-size: 0.8rem !important;
+  text-transform: lowercase;
+  margin-bottom: 0.8rem;
+}
+.footer_widget .tagcloud .tag-cloud-link::first-letter {
+  text-transform: uppercase;
+}
+.footer_widget .tagcloud .tag-cloud-link .tag-link-count {
+  color: #7c7c7c;
 }

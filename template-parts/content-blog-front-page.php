@@ -1,15 +1,3 @@
-<?php
-	/**
-	 * The template for displaying archive pages for Recipes
-	 *
-	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
-	 *
-	 * @package Bootscore
-	 */
-	
-	get_header();
-	?>
-
 <div id="content" class="site-content container py-5 mt-5">
     <div id="primary" class="content-area">
         
@@ -17,7 +5,7 @@
         <?php bs_after_primary(); ?>  
 
         <div class="row">
-            <div class="col-md-8 col-xxl-9">
+            <div class="col">
 
                 <main id="main" class="site-main">
 
@@ -72,7 +60,7 @@
                 </main><!-- #main -->
 
             </div><!-- col -->
-            <?php get_sidebar(); ?>
+
             
         </div><!-- row -->
 
@@ -81,3 +69,4 @@
 
 <?php
 get_footer();
+?>

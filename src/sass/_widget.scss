@@ -1,0 +1,25 @@
+.footer_widget{
+    
+    .widget-title{
+        
+    }
+
+    .tagcloud{
+        display: flex;
+        flex-direction: column;
+        flex-flow: column wrap;
+        max-height: 250px;
+        max-width: 300px;
+            .tag-cloud-link{
+                font-size: .8rem !important;
+                text-transform: lowercase;
+                margin-bottom: .8rem;
+                    &::first-letter{
+                        text-transform: uppercase;
+                    }
+                    .tag-link-count{
+                        color: #7c7c7c;
+                    }
+            }
+    }
+}

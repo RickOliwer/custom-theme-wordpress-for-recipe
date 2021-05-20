@@ -30,6 +30,7 @@
                     display: flex;
                     justify-content: center;
                     z-index: 10;
+                    max-width: 62rem;
                         h1{
                             color: #fff;
 
@@ -39,6 +40,7 @@
         .the-navbar{
             min-height: 8vh;
             font-family: 'poppins', sans-serif;
+            background-color: #fff !important;
                 .logo{
                     letter-spacing: 3px;
                     font-size: 20px;
@@ -83,7 +85,7 @@
                 right: 0px;
                 height: 92vh;
                 top: 8vh;
-                background-color: #f8f9fa;
+                background-color: #fff;
                 display: flex;
                 flex-direction: column !important;
                 align-items: center;

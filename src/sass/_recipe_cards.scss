@@ -83,23 +83,30 @@
                                             letter-spacing: 0.1rem;
                                             
                                             color: #333;
-                                            margin-bottom: 2.5rem;
+                                            margin-bottom: .5rem;
                                                 p{
                                                     font-size: .7rem;
+                                                    margin: 0;
+                                                    padding: 0;
                                                 }
                                         }
         
-                                        .my-card-btn{
-                                            display: block;
-                                            width: 100%;
-                                            padding: .8rem;
-                                            font-size: .8rem;
-                                            text-align: center;
-                                            border: 1px solid #808080;
-                                            background: #fff;
-                                                a{
-        
+                                        .my-card-rating{
+
+                                                .rating-container{
+                                                    margin: 0;
+                                                        .rating-icon{
+
+                                                                .far{
+                                                                    font-size: 1rem;
+                                                                }
+                                                        }
+
+                                                        .rating-content{
+                                                            display: none;
+                                                        }
                                                 }
+
                                         }
                                 }
                         }

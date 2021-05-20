@@ -1,4 +1,11 @@
 <?php if(get_header_image()) : ?>
+    <?php 
+        $title = get_the_title();
+
+        if(is_home()){
+            $title = get_bloginfo('name');
+        }
+    ?>
     <?php if(is_front_page()) : ?>
     <div id="hero-img">
         <img 
@@ -9,7 +16,7 @@
         >
         <div class="hero-header-text">
             <h1>
-                <?php the_title(); ?>
+                <?= $title; ?>
                 
             </h1>
         </div>

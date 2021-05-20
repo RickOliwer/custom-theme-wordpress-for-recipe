@@ -507,14 +507,29 @@ function cptui_support_author_archive( $query ) {
 		return;
 	}
 
-	if ( is_author() ) {
+	if ( is_author() || is_front_page()) {
 		$query->set(
 			'post_type', [
 				'post',
 				'bs_recipe',
 			]
 		);
-	}
+    }
+    
+
 }
 add_action( 'pre_get_posts', 'cptui_support_author_archive' );
+
+
+
+function my_cptui_change_posts_per_page( $query ) {
+    if ( is_admin() || ! $query->is_main_query() ) {
+       return;
+    }
+
+    if ( is_post_type_archive( 'bs_recipe' ) ) {
+       $query->set( 'posts_per_page', 12 );
+    }
+}
+add_filter( 'pre_get_posts', 'my_cptui_change_posts_per_page' );
 
