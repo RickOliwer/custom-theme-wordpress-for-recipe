@@ -49,19 +49,18 @@
                         }
                 }
                 .nav-items{
-                    
                         a {
                             letter-spacing: 3px;
                             font-weight: bold;
                             font-size: 14px;
-                            text-transform: lowercase;
+                            //text-transform: lowercase;
                                 &:hover{
                                     text-decoration: none;
                                 }
  
-                                &::first-letter{
-                                    text-transform: uppercase;
-                                }
+                                // &::first-letter{
+                                //     text-transform: uppercase;
+                                // }
                         }
                 }
                 
