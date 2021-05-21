@@ -15,6 +15,7 @@
 // include/require
 require_once('inc/recipe-contant.php');
 require_once('inc/recipe-info.php');
+require_once('inc/front-page-content.php');
 
 require get_template_directory() . '/inc/acf-loader.php';
 
