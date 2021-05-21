@@ -34,20 +34,22 @@ if ( ! function_exists( 'bs_recipe_category_badge' ) ) :
 			$recipes = get_terms('bs_recipe_category');
 			//if(!empty($recipes)){
 				
+			//$bar = ucfirst(strtolower($bar));	
 			
-		
+			
             echo '<ul class="">';
 			
 			
             foreach( $recipes as $recipe ) {
 				$recipe_url = get_term_link($recipe, 'bs_recipe_category');
-				printf(
-					'<li>
-						<a href="%s" class="">%s</a>
-					</li>',
-					$recipe_url,
-					$recipe->name
-				);
+				$value = ucfirst(strtolower($recipe->name));
+					printf(
+						'<li>
+							<a href="%s" class="">%s</a>
+						</li>',
+						$recipe_url,
+						$value,
+					);
 				
             }
             echo '</ul>';
@@ -60,7 +62,7 @@ endif;
 // Recipe Tags Nav
 if ( ! function_exists( 'bs_recipe_tags_badge' ) ) :
 	function bs_recipe_tags_badge() {
-			$recipes = get_terms('bs_recipe_tags');
+			$tags = get_terms('bs_recipe_tags');
 			//if(!empty($recipes)){
 				
 			
@@ -68,14 +70,15 @@ if ( ! function_exists( 'bs_recipe_tags_badge' ) ) :
             echo '<ul class="">';
 			
 			
-            foreach( $recipes as $recipe ) {
-				$recipe_url = get_term_link($recipe, 'bs_recipe_tags');
+            foreach( $tags as $tag ) {
+				$tag_url = get_term_link($tag, 'bs_recipe_tags');
+				$value = ucfirst(strtolower($tag->name));
 				printf(
 					'<li>
 						<a href="%s" class="">%s</a>
 					</li>',
-					$recipe_url,
-					$recipe->name
+					$tag_url,
+					$value
 				);
 				
             }

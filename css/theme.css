@@ -11121,10 +11121,6 @@ p, li, span {
 }
 .category-nav ul li {
   margin: 10px;
-  text-transform: lowercase;
-}
-.category-nav ul li::first-letter {
-  text-transform: uppercase;
 }
 
 .site-header #hero-img {

@@ -210,10 +210,10 @@ p, li, span {
                 li{
                     margin:  10px;
 
-                    text-transform: lowercase;
-                        &::first-letter{
-                            text-transform: uppercase;
-                        }
+                    // text-transform: lowercase;
+                    //     &::first-letter{
+                    //         text-transform: uppercase;
+                    //     }
                 
                 }
         }
