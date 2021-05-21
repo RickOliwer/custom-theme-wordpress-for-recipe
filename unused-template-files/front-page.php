@@ -14,13 +14,13 @@
 
     get_header();
     ?>
-<?php if(!is_home()): ?>
-    <?php 
-        get_template_part('template-parts/content-static-front-page');
-    ?>
-<?php else : ?>
-    <?php
-        get_template_part('template-parts/content-blog-front-page');
-    ?>
+    <?php if(!is_home()): ?>
+        <?php 
+            get_template_part('template-parts/content-static-front-page');
+        ?>
+    <?php else : ?>
+        <?php
+            get_template_part('template-parts/content-blog-front-page');
+        ?>
 
-<?php endif; ?>
+    <?php endif; ?>

@@ -22,9 +22,7 @@
                     <?php 
                         
                             get_template_part('template-parts/top-bs_recipe');
-                            //the_content();  
 
-                        
                     ?>
 
                     <div class="the-content">

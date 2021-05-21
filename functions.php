@@ -513,12 +513,18 @@ function cptui_support_author_archive( $query ) {
 	}
 
 	if ( is_author() || is_front_page()) {
-		$query->set(
+        // $post_type = array_merge(is_array($query->post_type) ? $query->post_type : [$query->post_type], ["bs_recipe", "post"]);
+		// $query->set(
+		// 	'post_type', $post_type
+        // );
+
+        $query->set(
 			'post_type', [
 				'post',
 				'bs_recipe',
 			]
-		);
+        );
+
     }
     
 

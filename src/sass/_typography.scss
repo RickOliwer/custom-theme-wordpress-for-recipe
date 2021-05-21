@@ -21,6 +21,14 @@ div a,
     background-color: #7777ae;
     border-color: #7777ae;
 }
+.top-button{
+
+        .btn-primary {
+            color: #fff;
+            background-color: #7777ae;
+            border-color: #7777ae;
+        }
+}
 
 h1{
     font-family: 'poppins', sans-serif;
@@ -34,6 +42,23 @@ h2, h3, h4, h5, h6{
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.1em !important;
+}
+
+.entry-header{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+        h1{
+            font-size: 1rem;
+            width: 60%;
+        }
+    @media screen and (min-width:760px){
+        h1{
+            font-size: 2rem;
+        }
+    }
 }
 
 p, li, span {
