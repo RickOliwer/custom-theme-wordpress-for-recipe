@@ -57,11 +57,21 @@
                                 &:hover{
                                     text-decoration: none;
                                 }
- 
+                                //firefox wont let me use this for now.
+                                
                                 // &::first-letter{
                                 //     text-transform: uppercase;
                                 // }
+ 
+                                
+                                
                         }
+
+                    //     a::first-letter{
+                    //         text-transform: uppercase;
+
+                    //    }
+
                 }
                 
         }
