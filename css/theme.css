@@ -10976,6 +10976,10 @@ p, li, span {
   color: #333;
 }
 
+.front-page-the-content .the-content-paragraph a {
+  color: #7777ae;
+}
+
 .entry-header {
   display: flex;
   justify-content: center;

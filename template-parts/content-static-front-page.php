@@ -24,7 +24,7 @@
                         get_template_part('template-parts/top-bs_recipe');
 
                     ?>
-                    <div class="the-content" style="margin-top: 7.8rem;">
+                    <div class="the-content front-page-the-content" style="margin-top: 7.8rem;">
                         <div class="the-content-paragraph">
                             <?php the_content(); ?>
                         </div>
