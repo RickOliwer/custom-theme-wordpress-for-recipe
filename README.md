@@ -21,7 +21,7 @@ This is a **WordPress** theme for uploading your **favorite recipes** with **pic
     ```bash
         sudo chown -R daemon acf-json
     ```
-    *This is usely a mac or xampp issue*
+    *This is usually a mac or xampp issue*
 
 
 
