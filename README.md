@@ -16,7 +16,7 @@ This is a **WordPress** theme for uploading your **favorite recipes** with **pic
 
 1. Include [acf pro](https://www.advancedcustomfields.com/pro/) to your theme. Copy all the files from the acf pro folder and paste into themes/irecipe/inc/acf-pro
 
-1. If you have issus including acf pro with the theme, you can try run:
+1. If you have issues including acf pro with the theme, you can try run:
 
     ```bash
         sudo chown -R daemon acf-json
