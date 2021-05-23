@@ -1,21 +1,21 @@
-# Copyright (C) 2021 Bastian Kreiter
+# Copyright (C) 2021 Rick Centerhall
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: bootScore 5 5.0.1.2\n"
+"Project-Id-Version: iRecipe 5.0.1.2\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/irecipe\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-05-20T18:47:10+00:00\n"
+"POT-Creation-Date: 2021-05-22T16:09:58+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: bootscore\n"
 
 #. Theme Name of the theme
-msgid "bootScore 5"
+msgid "iRecipe"
 msgstr ""
 
 #. Theme URI of the theme
@@ -27,7 +27,7 @@ msgid "A powerful Bootstrap 5 WordPress Starter Theme with WooCommerce Support. 
 msgstr ""
 
 #. Author of the theme
-msgid "Bastian Kreiter"
+msgid "Rick Centerhall"
 msgstr ""
 
 #. Author URI of the theme
@@ -64,13 +64,14 @@ msgid "Read more »"
 msgstr ""
 
 #: author.php:48
+#: home.php:46
 #: single.php:29
 #: template-parts/content-archive-bs_recipe.php:14
-#: template-parts/content-blog-front-page.php:34
 #: template-parts/content-search.php:25
 #: template-parts/content-single-bs_recipe.php:12
+#: template-parts/latests-bs_recipe.php:45
 #: template-parts/top-bs_recipe.php:53
-#: unused-template-files/home.php:46
+#: unused-template-files/content-blog-front-page.php:34
 #: unused-template-files/single-full-width-image.php:38
 #: unused-template-files/single-sidebar-left.php:31
 #: unused-template-files/single-sidebar-none.php:28
@@ -113,7 +114,7 @@ msgstr ""
 
 #. translators: %s: post title
 #: comments.php:98
-#: inc/template-tags.php:193
+#: inc/template-tags.php:196
 msgid "Leave a Comment"
 msgstr ""
 
@@ -145,67 +146,67 @@ msgstr ""
 msgid "Website"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:75
 msgid "Main Menu"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:76
 msgid "Footer Menu"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:156
 msgid "Top Nav"
 msgstr ""
 
-#: functions.php:152
-#: functions.php:164
-#: functions.php:176
-#: functions.php:188
-#: functions.php:200
-#: functions.php:212
-#: functions.php:224
-#: functions.php:236
-#: functions.php:248
+#: functions.php:158
+#: functions.php:170
+#: functions.php:182
+#: functions.php:194
+#: functions.php:206
+#: functions.php:218
+#: functions.php:230
+#: functions.php:242
+#: functions.php:254
 msgid "Add widgets here."
 msgstr ""
 
-#: functions.php:162
+#: functions.php:168
 msgid "Top Nav Search"
 msgstr ""
 
-#: functions.php:174
+#: functions.php:180
 msgid "Sidebar"
 msgstr ""
 
-#: functions.php:186
+#: functions.php:192
 msgid "Top Footer"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:204
 msgid "Footer 1"
 msgstr ""
 
-#: functions.php:210
+#: functions.php:216
 msgid "Footer 2"
 msgstr ""
 
-#: functions.php:222
+#: functions.php:228
 msgid "Footer 3"
 msgstr ""
 
-#: functions.php:234
+#: functions.php:240
 msgid "Footer 4"
 msgstr ""
 
-#: functions.php:246
+#: functions.php:252
 msgid "404 Page"
 msgstr ""
 
-#: functions.php:457
+#: functions.php:463
 msgid "Password"
 msgstr ""
 
-#: functions.php:458
+#: functions.php:464
 msgid "Submit"
 msgstr ""
 
@@ -216,7 +217,7 @@ msgstr ""
 #. translators: %s: Name of current post. Only visible to screen readers
 #: inc/comment-list.php:32
 #: inc/comment-list.php:57
-#: inc/template-tags.php:222
+#: inc/template-tags.php:225
 msgid "Edit"
 msgstr ""
 
@@ -235,6 +236,293 @@ msgstr ""
 
 #: inc/comment-list.php:111
 msgid "Save my name, email, and website in this browser for the next time I comment."
+msgstr ""
+
+#: inc/custom-post-types.php:9
+#: inc/custom-post-types.php:44
+msgid "Recipes"
+msgstr ""
+
+#: inc/custom-post-types.php:10
+#: inc/custom-post-types.php:34
+msgid "Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:11
+msgid "My Recipes"
+msgstr ""
+
+#: inc/custom-post-types.php:12
+msgid "All Recipes"
+msgstr ""
+
+#: inc/custom-post-types.php:13
+msgid "Add new"
+msgstr ""
+
+#: inc/custom-post-types.php:14
+msgid "Add new Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:15
+msgid "Edit Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:16
+msgid "New Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:17
+msgid "View Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:18
+msgid "View Recipes"
+msgstr ""
+
+#: inc/custom-post-types.php:19
+msgid "Search Recipes"
+msgstr ""
+
+#: inc/custom-post-types.php:20
+msgid "No Recipes found"
+msgstr ""
+
+#: inc/custom-post-types.php:21
+msgid "No Recipes found in trash"
+msgstr ""
+
+#: inc/custom-post-types.php:22
+#: inc/custom-post-types.php:40
+msgid "Parent Recipe:"
+msgstr ""
+
+#: inc/custom-post-types.php:23
+msgid "Featured image for this Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:24
+msgid "Set featured image for this Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:25
+msgid "Remove featured image for this Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:26
+msgid "Use as featured image for this Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:27
+msgid "Recipe archives"
+msgstr ""
+
+#: inc/custom-post-types.php:28
+msgid "Insert into Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:29
+msgid "Upload to this Recipe"
+msgstr ""
+
+#: inc/custom-post-types.php:30
+msgid "Filter Recipes list"
+msgstr ""
+
+#: inc/custom-post-types.php:31
+msgid "Recipes list navigation"
+msgstr ""
+
+#: inc/custom-post-types.php:32
+msgid "Recipes list"
+msgstr ""
+
+#: inc/custom-post-types.php:33
+msgid "Recipes attributes"
+msgstr ""
+
+#: inc/custom-post-types.php:35
+msgid "Recipe published"
+msgstr ""
+
+#: inc/custom-post-types.php:36
+msgid "Recipe published privately."
+msgstr ""
+
+#: inc/custom-post-types.php:37
+msgid "Recipe reverted to draft."
+msgstr ""
+
+#: inc/custom-post-types.php:38
+msgid "Recipe scheduled"
+msgstr ""
+
+#: inc/custom-post-types.php:39
+msgid "Recipe updated."
+msgstr ""
+
+#: inc/custom-taxonomies.php:10
+#: inc/custom-taxonomies.php:12
+#: inc/custom-taxonomies.php:35
+msgid "Recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:11
+msgid "Recipe category"
+msgstr ""
+
+#: inc/custom-taxonomies.php:13
+msgid "All recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:14
+msgid "Edit recipe category"
+msgstr ""
+
+#: inc/custom-taxonomies.php:15
+msgid "View recipe category"
+msgstr ""
+
+#: inc/custom-taxonomies.php:16
+msgid "Update recipe category name"
+msgstr ""
+
+#: inc/custom-taxonomies.php:17
+msgid "Add new recipe category"
+msgstr ""
+
+#: inc/custom-taxonomies.php:18
+msgid "New recipe category name"
+msgstr ""
+
+#: inc/custom-taxonomies.php:19
+msgid "Parent recipe category"
+msgstr ""
+
+#: inc/custom-taxonomies.php:20
+msgid "Parent recipe category:"
+msgstr ""
+
+#: inc/custom-taxonomies.php:21
+msgid "Search recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:22
+msgid "Popular recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:23
+msgid "Separate recipe categories with commas"
+msgstr ""
+
+#: inc/custom-taxonomies.php:24
+msgid "Add or remove recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:25
+msgid "Choose from the most used recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:26
+msgid "No recipe categories found"
+msgstr ""
+
+#: inc/custom-taxonomies.php:27
+msgid "No recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:28
+msgid "recipe categories list navigation"
+msgstr ""
+
+#: inc/custom-taxonomies.php:29
+msgid "recipe categories list"
+msgstr ""
+
+#: inc/custom-taxonomies.php:30
+msgid "Back to recipe categories"
+msgstr ""
+
+#: inc/custom-taxonomies.php:60
+#: inc/custom-taxonomies.php:62
+#: inc/custom-taxonomies.php:85
+msgid "Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:61
+msgid "Recipe Tag"
+msgstr ""
+
+#: inc/custom-taxonomies.php:63
+msgid "All Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:64
+msgid "Edit Recipe Tag"
+msgstr ""
+
+#: inc/custom-taxonomies.php:65
+msgid "View Recipe Tag"
+msgstr ""
+
+#: inc/custom-taxonomies.php:66
+msgid "Update Recipe Tag name"
+msgstr ""
+
+#: inc/custom-taxonomies.php:67
+msgid "Add new Recipe Tag"
+msgstr ""
+
+#: inc/custom-taxonomies.php:68
+msgid "New Recipe Tag name"
+msgstr ""
+
+#: inc/custom-taxonomies.php:69
+msgid "Parent Recipe Tag"
+msgstr ""
+
+#: inc/custom-taxonomies.php:70
+msgid "Parent Recipe Tag:"
+msgstr ""
+
+#: inc/custom-taxonomies.php:71
+msgid "Search Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:72
+msgid "Popular Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:73
+msgid "Separate Recipe Tags with commas"
+msgstr ""
+
+#: inc/custom-taxonomies.php:74
+msgid "Add or remove Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:75
+msgid "Choose from the most used Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:76
+msgid "No Recipe Tags found"
+msgstr ""
+
+#: inc/custom-taxonomies.php:77
+msgid "No Recipe Tags"
+msgstr ""
+
+#: inc/custom-taxonomies.php:78
+msgid "Recipe Tags list navigation"
+msgstr ""
+
+#: inc/custom-taxonomies.php:79
+msgid "Recipe Tags list"
+msgstr ""
+
+#: inc/custom-taxonomies.php:80
+msgid "Back to Recipe Tags"
 msgstr ""
 
 #: inc/recipe-contant.php:80
@@ -267,41 +555,41 @@ msgid "Instructions"
 msgstr ""
 
 #. translators: used between list items, there is a space after the comma
-#: inc/template-tags.php:122
+#: inc/template-tags.php:125
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:168
+#: inc/template-tags.php:171
 msgctxt "post author"
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:250
+#: inc/template-tags.php:253
 msgid "Leave a comment"
 msgstr ""
 
 #. translators: 1: list of tags.
-#: inc/template-tags.php:274
+#: inc/template-tags.php:277
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:339
+#: inc/template-tags.php:342
 msgid "Internet Explorer detected"
 msgstr ""
 
-#: inc/template-tags.php:340
+#: inc/template-tags.php:343
 msgid "This website will offer limited functionality in this browser."
 msgstr ""
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:344
 msgid "Please use a modern and secure web browser like"
 msgstr ""
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:344
 msgid "or"
 msgstr ""
 
-#: inc/template-tags.php:341
+#: inc/template-tags.php:344
 msgid "to display this site correctly."
 msgstr ""
 
@@ -337,8 +625,8 @@ msgstr ""
 #: page-templates/page-blank-without-container.php:21
 #: page-templates/page-sidebar-left.php:38
 #: page-templates/page-sidebar-right.php:37
-#: page.php:38
-#: template-parts/content-static-front-page.php:37
+#: page.php:43
+#: template-parts/content-static-front-page.php:39
 msgid "Pages:"
 msgstr ""
 
@@ -378,6 +666,10 @@ msgstr ""
 
 #: template-parts/content-none.php:43
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr ""
+
+#: template-parts/latests-bs_recipe.php:22
+msgid " iRecipe latest recipe "
 msgstr ""
 
 #: template-parts/searchform.php:3
